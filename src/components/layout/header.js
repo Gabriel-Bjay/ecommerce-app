@@ -1,13 +1,67 @@
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import { Link } from 'react-router-dom';
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import LoginIcon from '@mui/icons-material/Login';
 
-const header = () => {
+// import { Link } from 'react-router-dom';
+import "./Header.css"
+
+const Header = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div className='alert'>
+        <h5 className='alert-1'>We currently do not support shipping or delivery. <strong>COMING SOON</strong></h5>
+      </div>
+
+          <div className='header-container'>
+            <div className='logo-container'>
+              <img src='' 
+                  alt='Urban Living Logo' 
+                  className='site-logo'/>
+            </div>
+            
+              <div className='categories'>
+                <p>Shop By <u>Categories</u></p>
+              </div>
+              
+              <div className='components'>
+                  <div className='ideas'>
+                    <AddToPhotosIcon className='icon'/>
+                    <h6>Ideas</h6>
+                    <KeyboardArrowDownIcon className='drop-down'/>
+                  </div>
+
+                  <div className='shop'>
+                    <h6>Shop</h6>
+                    <KeyboardArrowDownIcon className='drop-down'/>
+                  </div>
+
+                  <div className='collection'>
+                    <h6>Collection</h6>
+                    <KeyboardArrowDownIcon className='drop-down'/>
+                  </div>
+              </div>
+
+              <div className='header_search'>
+                <input className="header_input" type="text" />
+                <SearchIcon className="search_icon" />
+              </div>
+
+              <div className='login'>
+                <LoginIcon className='login-icon'/>
+                <span>Hello,</span>
+                <span>Login/Register</span>
+              </div>
+
+              <div className='shopping-basket'>
+                <ShoppingBasketIcon className='shopping-basket-icon'/>
+              </div>
+
+          </div>
+    
+    </>
   )
 }
 
-export default header
+export default Header;

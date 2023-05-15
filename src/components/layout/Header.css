@@ -1,0 +1,25 @@
+.alert{
+    background-color: rgb(47, 47, 47);
+    color: white;
+}
+.alert-1{
+    padding-left: 1rem;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffc681;
+    height: 5rem;
+    justify-content: space-between;
+}
+
+.components{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 3rem;
+}

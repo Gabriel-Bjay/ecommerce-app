@@ -1,0 +1,37 @@
+.home{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+}
+
+.home-container{
+    align-items: center;
+}
+
+.home-image{
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+}
+
+.insights {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.redirect{
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 10rem;
+    height: 3rem;
+}

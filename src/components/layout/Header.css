@@ -29,6 +29,11 @@
     margin-left: 1rem;
 }
 
+.categories{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .component{
     display: flex;
     flex: 1;
@@ -49,9 +54,17 @@
     align-items: center;
     border-radius: 24px;
   }
-
+  .header_input {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 50%;
+  } 
   .search_icon {
     padding: 5px;
     height: 22px !important;
   }  
 
+.shopping-basket{
+    margin-right: 30px;
+}  

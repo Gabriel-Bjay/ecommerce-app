@@ -50,8 +50,7 @@ const Header = () => {
 
               <div className='login'>
                 <LoginIcon className='login-icon'/>
-                <span>Hello,</span>
-                <span>Login/Register</span>
+                <p>Hello, <em>Login/Register</em></p>
               </div>
 
               <div className='shopping-basket'>

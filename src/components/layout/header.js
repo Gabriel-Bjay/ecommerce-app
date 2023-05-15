@@ -16,7 +16,7 @@ const Header = () => {
 
           <div className='header-container'>
             <div className='logo-container'>
-              <img src='' 
+              <img src='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f0947d102336539.5f341d2eb6ca2.jpg' 
                   alt='Urban Living Logo' 
                   className='site-logo'/>
             </div>
@@ -26,18 +26,18 @@ const Header = () => {
               </div>
               
               <div className='components'>
-                  <div className='ideas'>
+                  <div className='component'>
                     <AddToPhotosIcon className='icon'/>
                     <h6>Ideas</h6>
                     <KeyboardArrowDownIcon className='drop-down'/>
                   </div>
 
-                  <div className='shop'>
+                  <div className='component'>
                     <h6>Shop</h6>
                     <KeyboardArrowDownIcon className='drop-down'/>
                   </div>
 
-                  <div className='collection'>
+                  <div className='component'>
                     <h6>Collection</h6>
                     <KeyboardArrowDownIcon className='drop-down'/>
                   </div>

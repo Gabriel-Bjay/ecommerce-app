@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-Aesthetic Furniture eCommerce App
+Aesthetic Urban Living eCommerce App
 
 This repository contains the code for an eCommerce app built using React, designed specifically for selling aesthetic furniture. The app provides a user-friendly interface for browsing, selecting, and purchasing furniture items.
 

@@ -4,6 +4,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import FeaturedProducts from '../Products/FeaturedProducts';
+import Categories from '../Categories/Categories';
 
 const Home = () => {
   return (
@@ -55,6 +56,7 @@ const Home = () => {
       </div>
     </section>
     <FeaturedProducts/>
+    <Categories/>
     
       
     

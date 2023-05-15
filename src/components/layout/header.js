@@ -22,7 +22,7 @@ const Header = () => {
             </div>
             
               <div className='categories'>
-                <p>Shop By <u>Categories</u></p>
+                <p>Shop <br/>By <u>Categories</u></p>
               </div>
               
               <div className='components'>
@@ -50,7 +50,7 @@ const Header = () => {
 
               <div className='login'>
                 <LoginIcon className='login-icon'/>
-                <p>Hello, <em>Login/Register</em></p>
+                <p>Hello, <br/><em>Login/Register</em></p>
               </div>
 
               <div className='shopping-basket'>

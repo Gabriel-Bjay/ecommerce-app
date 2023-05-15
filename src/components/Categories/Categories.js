@@ -14,6 +14,7 @@ const Categories = () => {
     <div className='categories-container'>
       <h2>Shop By Categories</h2>
       <p>Start exploring by choosing any furniture categories</p>
+
       <div className='categories-list'>
         <div className='category'>
             <ChairOutlinedIcon className='icon' />
@@ -46,6 +47,48 @@ const Categories = () => {
         <div className='category'>
             <PortraitIcon className='icon' />
             <p>Side Tables</p>
+        </div>
+      </div>
+
+      <div className='location-categories'>
+
+        <div className='room'>
+            <h5>Curate the best <br/>dining area</h5>
+            <p>From dining tables,chairs,<br/>sideboards and more</p>
+            <button>Dining Room</button>
+            <div className='demo-image'>
+                <img
+                src=''
+                alt=''
+                className=''
+                />
+            </div>
+        </div>
+
+        <div className='room'>
+            <h5>Style your cozy <br/>living room</h5>
+            <p>From sofas,coffee tables,side<br/> tables cabinets and more</p>
+            <button>Living Room</button>
+            <div className='demo-image'>
+                <img
+                src=''
+                alt=''
+                className=''
+                />
+            </div>
+        </div>
+
+        <div className='room'>
+            <h5>Make your bedroom <br/>comfortable</h5>
+            <p>From bedframes, mattresses,<br/> bedside tables, and more</p>
+            <button>Bedroom</button>
+            <div className='demo-image'>
+                <img
+                src=''
+                alt=''
+                className=''
+                />
+            </div>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import "./Home.css"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import StorefrontIcon from '@mui/icons-material/Storefront';
+import FeaturedProducts from '../Products/FeaturedProducts';
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
           </div>
         </div>
     </section>
+    
     <section>
       <div className='home-content'>
           <div className='top-content'>
@@ -52,7 +54,10 @@ const Home = () => {
           </div>
       </div>
     </section>
-
+    <FeaturedProducts/>
+    
+      
+    
       
     </div>  
   )

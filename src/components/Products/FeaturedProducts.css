@@ -1,0 +1,17 @@
+.scroll-bar{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.products{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 14px;
+}
+
+.featured_products{
+    display: flex;
+    justify-content: space-between;
+}
+

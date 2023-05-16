@@ -7,6 +7,7 @@ import FeaturedProducts from '../Products/FeaturedProducts';
 import Categories from '../Categories/Categories';
 import NewArrivals from '../Arrivals/NewArrivals';
 import Collections from '../Collections/Collections';
+import Brands from '../Brands/Brands';
 
 const Home = () => {
   return (
@@ -61,6 +62,7 @@ const Home = () => {
     <Categories/>
     <NewArrivals/>
     <Collections/>
+    <Brands/>
     
       
     

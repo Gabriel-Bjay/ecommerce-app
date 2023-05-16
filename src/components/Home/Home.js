@@ -5,6 +5,7 @@ import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import FeaturedProducts from '../Products/FeaturedProducts';
 import Categories from '../Categories/Categories';
+import NewArrivals from '../Arrivals/NewArrivals';
 
 const Home = () => {
   return (
@@ -57,6 +58,7 @@ const Home = () => {
     </section>
     <FeaturedProducts/>
     <Categories/>
+    <NewArrivals/>
     
       
     

@@ -6,6 +6,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import FeaturedProducts from '../Products/FeaturedProducts';
 import Categories from '../Categories/Categories';
 import NewArrivals from '../Arrivals/NewArrivals';
+import Collections from '../Collections/Collections';
 
 const Home = () => {
   return (
@@ -59,6 +60,7 @@ const Home = () => {
     <FeaturedProducts/>
     <Categories/>
     <NewArrivals/>
+    <Collections/>
     
       
     

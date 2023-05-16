@@ -7,6 +7,10 @@ import DeskOutlinedIcon from '@mui/icons-material/DeskOutlined';
 import TableBarOutlinedIcon from '@mui/icons-material/TableBarOutlined';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import PortraitIcon from '@mui/icons-material/Portrait';
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
+import OutlinedFlagIcon from '@mui/icons-material/OutlinedFlag';
+import ViewInArOutlinedIcon from '@mui/icons-material/ViewInArOutlined';
+import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
 import "./Categories.css"
 
 const Categories = () => {
@@ -91,6 +95,36 @@ const Categories = () => {
             </div>
         </div>
       </div>
+      <div className='conditions'>
+            <div className='authentic'>
+                <CheckCircleOutlinedIcon/>
+                <div className=''>
+                    <h4>Authentic Brands</h4>
+                    <p>Homegrown Brands</p>
+                </div>
+            </div>
+            <div className='authentic'>
+                <OutlinedFlagIcon/>
+                <div className=''>
+                    <h4>Locally Made</h4>
+                    <p>Made In Kenya</p>
+                </div>
+            </div>
+            <div className='authentic'>
+                <ViewInArOutlinedIcon/>
+                <div className=''>
+                    <h4>Export Quality</h4>
+                    <p>High-Quality Standards</p>
+                </div>
+            </div>
+            <div className='authentic'>
+                <ShieldOutlinedIcon/>
+                <div className=''>
+                    <h4>Best Protection</h4>
+                    <p>Warranty And Protection Plans</p>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }

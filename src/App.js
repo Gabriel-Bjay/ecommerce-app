@@ -1,4 +1,5 @@
 import './App.css';
+import Diningroom from './components/Categories/Diningroom/Diningroom';
 // import { Route, Routes } from 'react-router-dom';
 // import Home from './components/Home/Home';
 import Header from './components/layout/Header';
@@ -11,7 +12,7 @@ import Header from './components/layout/Header';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Diningroom/>
        {/* <Header/>
           <main>
             <Routes>

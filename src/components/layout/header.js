@@ -103,7 +103,7 @@ const Header = () => {
                 <SearchIcon className="search_icon" />
               </div>
 
-              <div className='login'>
+              <div className='login-section'>
                 <LoginIcon className='login-icon'/>
                 <p>Hello, <br/><em>Login/Register</em></p>
               </div>

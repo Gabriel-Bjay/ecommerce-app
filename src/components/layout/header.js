@@ -5,8 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LoginIcon from '@mui/icons-material/Login';
 import { BedOutlined, DiningOutlined, KitchenOutlined, LivingOutlined, MapsHomeWorkOutlined } from '@mui/icons-material';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Header.css"
 
 const Header = () => {
@@ -18,47 +17,62 @@ const Header = () => {
 
           <div className='header-container'>
             <div className='logo-container'>
+            <Link to="/">
               <img src='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f0947d102336539.5f341d2eb6ca2.jpg' 
-                  alt='Urban Living Logo' 
-                  className='site-logo'/>
+                    alt='Urban Living Logo' 
+                    className='site-logo'/>
+            </Link>
+              
             </div>
             
               <div className='categories'>
                 <p>Shop <br/>By <u>Categories</u></p>
                 <div className='drop-down-list'>
                   <div className='room'>
-                    <LivingOutlined/>
-                    <p>Living Room</p>
-                    <ArrowRightOutlinedIcon/>
+                    <Link to='livingroom'>
+                      <LivingOutlined/>
+                      <p>Living Room</p>
+                      <ArrowRightOutlinedIcon/>
+                    </Link>     
+                  </div>
+
+                  <div className='room'>
+                    <Link to="/bedroom">
+                      <BedOutlined/>
+                      <p>Bed Room</p>
+                      <ArrowRightOutlinedIcon/>
+                    </Link>  
                   </div>
                   <div className='room'>
-                    <BedOutlined/>
-                    <p>Bed Room</p>
-                    <ArrowRightOutlinedIcon/>
-                  </div>
-                  <div className='room'>
+                    <Link to="/diningroom">
                     <DiningOutlined/>
-                    <p>DiningRoom</p>
+                    <p>Dining Room</p>
                     <ArrowRightOutlinedIcon/>
+                    </Link>
                   </div>
                   <div className='room'>
+                  <Link to="/kitchen">
                     <KitchenOutlined/>
                     <p>Kitchen</p>
                     <ArrowRightOutlinedIcon/>
+                  </Link>   
                   </div>
                   <div className='room'>
+                  <Link to="/office">
                     <MapsHomeWorkOutlined/>
                     <p>Office</p>
                     <ArrowRightOutlinedIcon/>
+                  </Link>
                   </div>
                 </div>
               </div>
               
               <div className='components'>
                   <div className='component'>
+                  <Link to="ideas">
                     <AddToPhotosIcon className='icon'/>
                     <h6>Ideas</h6>
-                    <KeyboardArrowDownIcon className='drop-down'/>
+                  </Link>
                     <div className='component-drop-down'>
                     </div>
                   </div>
@@ -70,10 +84,20 @@ const Header = () => {
                       <div className='departments'>
                         <div className='rooms'>
                           <h4>Rooms</h4>
-                          <p>Living Room</p>
-                          <p>Kitchen</p>
-                          <p>Bedroom</p>
-                          <p>Office</p>
+                          <Link to="/livingroom">
+                            <p>Living Room</p>
+                          </Link>
+
+                          <Link to="/kitchen">
+                            <p>Kitchen</p>
+                          </Link>
+
+                          <Link to="/bedroom">
+                            <p>Bedroom</p>
+                          </Link> 
+                          <Link to="/office">
+                            <p>Office</p>
+                          </Link>                                                  
                         </div>
                         <div className='categories'>
                           <h4>Categories</h4>
@@ -93,8 +117,9 @@ const Header = () => {
                   </div>
 
                   <div className='component'>
-                    <h6>Collection</h6>
-                    <KeyboardArrowDownIcon className='drop-down'/>
+                  <Link to="/collections">
+                    <h6>Collections</h6>
+                  </Link>
                   </div>
               </div>
 
@@ -104,7 +129,9 @@ const Header = () => {
               </div>
 
               <div className='login-section'>
-                <LoginIcon className='login-icon'/>
+                <Link to="/login">
+                  <LoginIcon className='login-icon'/> 
+                </Link>
                 <p>Hello, <br/><em>Login/Register</em></p>
               </div>
 

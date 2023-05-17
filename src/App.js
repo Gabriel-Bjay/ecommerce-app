@@ -1,19 +1,17 @@
 import './App.css';
-import Diningroom from './components/Categories/Diningroom/Diningroom';
-// import { Route, Routes } from 'react-router-dom';
-// import Home from './components/Home/Home';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home/Home';
 import Header from './components/layout/Header';
-// import Footer from './components/Footer/Footer';
-// import Login from "./components/Login/Login";
-// import Categories from './components/Categories/Categories';
-// import Ideas from "./components/ideas/Ideas";
+import Footer from './components/Footer/Footer';
+import Login from "./components/Login/Login";
+import Categories from './components/Categories/Categories';
+import Ideas from "./components/ideas/Ideas";
 
 
 function App() {
   return (
     <div className="App">
-      <Diningroom/>
-       {/* <Header/>
+      <Header/>
           <main>
             <Routes>
               <Route path='/' element={<Home/>}/>
@@ -22,7 +20,7 @@ function App() {
               <Route path='ideas' element={<Ideas/>}/>
             </Routes>              
           </main>
-       <Footer/> */}
+       <Footer/>
     </div>
   );
 }

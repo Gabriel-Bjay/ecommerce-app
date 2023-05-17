@@ -49,6 +49,7 @@ const Footer = () => {
                 <Facebook/>
             </div>
         </div>
+
         <div className='end-footer'>
             <div className='left-footer'>
                 <p>Copyright @2023 <strong>Urban Livin</strong> .All rights Reserved.</p>
@@ -57,7 +58,6 @@ const Footer = () => {
       
             </div>
         </div>
-
     </div>
   )
 }

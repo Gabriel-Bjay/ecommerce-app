@@ -1,4 +1,5 @@
 import './App.css';
+import Tables from './components/Categories/Specifics/Tables/Tables';
 // import { Route, Routes } from 'react-router-dom';
 // import Home from './components/Home/Home';
 // import Header from './components/layout/Header';
@@ -12,14 +13,15 @@ import './App.css';
 // import Bedroom from './components/Categories/Departments/Bedroom/Bedroom';
 // import Office from './components/Categories/Departments/Kitchen/Office/Office';
 // import Collections from './components/Collections/Collections';
-import Sofas from './components/Categories/Specifics/Sofas/Sofas';
+
 
 
 function App() {
   return (
     <div className="App">
-    <Sofas/>
-      {/* <Header/>
+    
+      <Tables/>
+          {/* <Header/>
           <main>
             <Routes>
               <Route path='/' element={<Home/>}/>

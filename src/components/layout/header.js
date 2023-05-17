@@ -66,6 +66,30 @@ const Header = () => {
                   <div className='component'>
                     <h6>Shop</h6>
                     <KeyboardArrowDownIcon className='drop-down'/>
+                    <div className='drop-down-list-2'>
+                      <div className='departments'>
+                        <div className='rooms'>
+                          <h4>Rooms</h4>
+                          <p>Living Room</p>
+                          <p>Kitchen</p>
+                          <p>Bedroom</p>
+                          <p>Office</p>
+                        </div>
+                        <div className='categories'>
+                          <h4>Categories</h4>
+                          <p>Sofas</p>
+                          <p>Beds</p>
+                          <p>Tables</p>
+                          <p>Chairs</p>
+                        </div>
+                        <div className='collections'>
+                          <h4>Collections</h4>
+                          <p>Japanese,Minimalsim</p>
+                          <p>Modern,Industrial</p>
+                          <p>Valebeck, Modern</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className='component'>

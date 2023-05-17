@@ -53,6 +53,11 @@
     display: block;
 }
 
+.component:hover .drop-down-list-2{
+    display: block;
+}
+
+
 .room{
     color: black;
     text-decoration: none;
@@ -67,6 +72,22 @@
     margin-left: 5px;
     margin-right: 5px;
     display: flex;
+}
+
+.drop-down-list-2{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.departments{
+    padding: 10px;
+    margin-top: 15rem;
+    position: relative;
+    display: inline-block;
 }
 
 

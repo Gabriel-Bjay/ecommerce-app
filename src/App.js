@@ -1,4 +1,5 @@
 import './App.css';
+import Office from './components/Categories/Office/Office';
 // import { Route, Routes } from 'react-router-dom';
 // import Home from './components/Home/Home';
 // import Header from './components/layout/Header';
@@ -6,14 +7,11 @@ import './App.css';
 // import Login from "./components/Login/Login";
 // import Categories from './components/Categories/Categories';
 // import Ideas from "./components/ideas/Ideas";
-import LivingRoom from './components/Categories/Livingroom/LivingRoom';
-import Kitchen from './components/Categories/Kitchen/Kitchen';
 
 function App() {
   return (
     <div className="App">
-      <LivingRoom/>
-      <Kitchen/>
+      <Office/>
        {/* <Header/>
           <main>
             <Routes>

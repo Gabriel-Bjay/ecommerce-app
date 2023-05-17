@@ -3,6 +3,8 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LoginIcon from '@mui/icons-material/Login';
+import { BedOutlined, DiningOutlined, KitchenOutlined, LivingOutlined, MapsHomeWorkOutlined } from '@mui/icons-material';
+import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 
 // import { Link } from 'react-router-dom';
 import "./Header.css"
@@ -23,6 +25,33 @@ const Header = () => {
             
               <div className='categories'>
                 <p>Shop <br/>By <u>Categories</u></p>
+                <div className='drop-down-list'>
+                  <div className='room'>
+                    <LivingOutlined/>
+                    <p>Living Room</p>
+                    <ArrowRightOutlinedIcon/>
+                  </div>
+                  <div className='room'>
+                    <BedOutlined/>
+                    <p>Bed Room</p>
+                    <ArrowRightOutlinedIcon/>
+                  </div>
+                  <div className='room'>
+                    <DiningOutlined/>
+                    <p>DiningRoom</p>
+                    <ArrowRightOutlinedIcon/>
+                  </div>
+                  <div className='room'>
+                    <KitchenOutlined/>
+                    <p>Kitchen</p>
+                    <ArrowRightOutlinedIcon/>
+                  </div>
+                  <div className='room'>
+                    <MapsHomeWorkOutlined/>
+                    <p>Office</p>
+                    <ArrowRightOutlinedIcon/>
+                  </div>
+                </div>
               </div>
               
               <div className='components'>

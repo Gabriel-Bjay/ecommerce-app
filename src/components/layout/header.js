@@ -59,6 +59,8 @@ const Header = () => {
                     <AddToPhotosIcon className='icon'/>
                     <h6>Ideas</h6>
                     <KeyboardArrowDownIcon className='drop-down'/>
+                    <div className='component-drop-down'>
+                    </div>
                   </div>
 
                   <div className='component'>

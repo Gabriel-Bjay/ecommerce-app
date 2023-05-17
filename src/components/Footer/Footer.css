@@ -1,0 +1,40 @@
+.footer-container{
+    background-color: #ffc681;
+    color: black;
+    border-top: 3px black solid;
+}
+
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px;
+    padding: 15px;
+    border-bottom: 0.6px solid black;
+}
+
+.home-logo{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+}
+
+.description-container{
+    margin: 2rem;
+    text-align: center;
+    display: grid;
+    border-bottom: 1px gray solid;
+}
+
+.location-container{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px gray solid;
+}
+
+.end-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}

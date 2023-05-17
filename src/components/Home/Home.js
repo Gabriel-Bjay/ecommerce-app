@@ -8,6 +8,8 @@ import Categories from '../Categories/Categories';
 import NewArrivals from '../Arrivals/NewArrivals';
 import Collections from '../Collections/Collections';
 import Brands from '../Brands/Brands';
+import Reviews from "../Reviews/Reviews"
+import Footer from '../Footer/Footer';
 
 const Home = () => {
   return (
@@ -63,6 +65,8 @@ const Home = () => {
     <NewArrivals/>
     <Collections/>
     <Brands/>
+    <Reviews/>
+    <Footer/>
     
       
     

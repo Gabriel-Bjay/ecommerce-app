@@ -2,6 +2,7 @@ import React from 'react'
 import "./Footer.css"
 import ViewInArOutlinedIcon from '@mui/icons-material/ViewInArOutlined';
 import { Facebook, Headphones, Instagram, ShieldMoonOutlined, ShoppingCart } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -45,8 +46,13 @@ const Footer = () => {
                 <p>urbanlivin@outlolok.com</p>
             </div>
             <div className='socials'>
-                <Instagram/>
-                <Facebook/>
+                
+                    <Link to='https://www.instagram.com/wrldhates.makara/#'>
+                        <Instagram/>
+                    </Link>
+                    <Link to ='https://www.instagram.com/wrldhates.makara/#'>
+                        <Facebook/>
+                    </Link>
             </div>
         </div>
 

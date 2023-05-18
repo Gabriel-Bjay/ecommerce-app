@@ -7,8 +7,7 @@ import FeaturedProducts from '../Products/FeaturedProducts';
 import Categories from '../Categories/Categories';
 import NewArrivals from '../Arrivals/NewArrivals';
 import Collections from '../Collections/Collections';
-import Brands from '../Brands/Brands';
-import Reviews from "../Reviews/Reviews"
+
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -77,8 +76,8 @@ const Home = () => {
     <Categories/>
     <NewArrivals/>
     <Collections/>
-    <Brands/>
-    <Reviews/> 
+    
+     
       
     
       

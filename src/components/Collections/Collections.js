@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const Collections = () => {
   return (
     <div>
-      <h3>Shop The Collections</h3>
+      <h3 className='main-col-header'>Shop The Collections</h3>
       <div className='collections-container'>
         <div className='collection'>
-            <p>Japanese,Minimalsim</p>
-            <h4>Neo Basic Collection</h4>
+            <h5 className='collection-header'>Japanese,Minimalsim</h5>
+            <p className='collection-sub'>Neo Basic Collection</p>
             <Link to='/japanese-collection'>
               <p className='button-line'>View Collection <ArrowForwardOutlinedIcon/> </p>
             </Link>
@@ -23,8 +23,8 @@ const Collections = () => {
             </div>
         </div>
         <div className='collection'>
-        <p>Modern,Industrial</p>
-            <h4>Rumah Collection</h4>
+        <h5 className='collection-header'>Modern,Industrial</h5>
+            <p className='collection-sub'>Rumah Collection</p>
             <Link to='/modern-collection'>
               <p className='button-line'>View Collection <ArrowForwardOutlinedIcon/> </p>
             </Link>
@@ -36,8 +36,8 @@ const Collections = () => {
             </div>
         </div>
         <div className='collection'>
-            <p>Valebeck, Modern</p>
-                <h4>Ashley Collection</h4>
+            <h5 className='collection-header'>Valebeck, Modern</h5>
+                <p className='collection-sub'>Ashley Collection</p>
                 <Link to='/valebeck-collection'>
                   <p className='button-line'>View Collection <ArrowForwardOutlinedIcon/> </p>
                 </Link>

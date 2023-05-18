@@ -15,7 +15,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [search, setSearch] = useState('');
   const [user] = useAuthState(auth);
+  const onSearch =(searchTerm) =>{
+    console.log('Search' , searchTerm)
+  }
+
+
 
   const handleLogout = () => {
     signOut(auth)
@@ -157,8 +163,11 @@ const Header = () => {
               </div>
 
               <div className='header_search'>
-                <input className="header_input" type="text" />
-                <SearchIcon className="search_icon" />
+                <input className="header_input" type="text" value={search}
+                onChange={(e) => setSearch(e.target.value)} placeholder="Search" />
+                <SearchIcon className="search_icon" 
+                  onClick={() => onSearch(search)}
+                />
               </div>
 
               <div className='login-section'>

@@ -9,6 +9,7 @@ import NewArrivals from '../Arrivals/NewArrivals';
 import Collections from '../Collections/Collections';
 import Brands from '../Brands/Brands';
 import Reviews from "../Reviews/Reviews"
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -43,19 +44,32 @@ const Home = () => {
     <section>
       <div className='home-content'>
           <div className='top-content'>
+          <Link to='/tables'>
             <button>Tv Cabinets</button> 
-            <button>Sofas</button> 
+          </Link>
+          <Link to='/sofas'>
+            <button>Sofas</button>
+          </Link>
+          <Link to='/tables'>
             <button>Coffee Tables</button> 
+          </Link>
+          <Link to ='/tables'>
             <button>Side Tables</button> 
+          </Link>
+          <Link to='/chairs'>
             <button>Lounge Chairs</button> 
+          </Link>
+          <Link to='/tables'>
             <button>Dining Tables</button> 
+          </Link>    
           </div>
           <div className='bottom-content'>
+          <Link to='/chairs'>
             <button>Dining Chairs</button> 
-            <button>Bed Frames</button> 
-            <button>Desks</button> 
-            <button>Benches</button> 
-            <button>Home Decor</button> 
+          </Link>
+          <Link to='/beds'>
+            <button>Bed Frames</button>  
+          </Link>  
           </div>
       </div>
     </section>

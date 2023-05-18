@@ -7,8 +7,27 @@ import { BedOutlined, DiningOutlined, KitchenOutlined, LivingOutlined, MapsHomeW
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import { Link } from 'react-router-dom';
 import "./Header.css"
+import { useState } from 'react';
+import { auth } from "../../firebase";
+import { signOut } from "firebase/auth";
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user] = useAuthState(auth);
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        // Logout successful
+        setIsLoggedIn(false); // Update the isLoggedIn state
+      })
+      .catch((error) => {
+        // Handle any errors that occur during logout
+        console.log("Logout error:", error);
+      });
+  };
   return (
     <>
       <div className='alert'>
@@ -101,10 +120,18 @@ const Header = () => {
                         </div>
                         <div className='categories'>
                           <h4>Categories</h4>
-                          <p>Sofas</p>
-                          <p>Beds</p>
-                          <p>Tables</p>
-                          <p>Chairs</p>
+                          <Link to='/sofas'>
+                            <p>Sofas</p>
+                          </Link>
+                          <Link to='/beds'>
+                            <p>Beds</p>
+                          </Link>
+                          <Link to='/chairs'>
+                            <p>Chairs</p>
+                          </Link>
+                          <Link to='/tables'>
+                            <p>Tables</p>
+                          </Link>
                         </div>
                         <div className='collections'>
                           <h4>Collections</h4>
@@ -129,11 +156,24 @@ const Header = () => {
               </div>
 
               <div className='login-section'>
+                {user ? (
+                  <>
+                    <LoginIcon onClick={handleLogout}/>
+                    <p>Hello, <br/><em>{user.email}</em></p>
+                  </>
+                ) : (
+                  <Link to='/login'>
+                    <LoginIcon/>
+                  </Link>
+                )}
+              </div>
+
+              {/* <div className='login-section'>
                 <Link to="/login">
                   <LoginIcon className='login-icon'/> 
                 </Link>
                 <p>Hello, <br/><em>Login/Register</em></p>
-              </div>
+              </div> */}
 
               <div className='shopping-basket'>
                 <ShoppingBasketIcon className='shopping-basket-icon'/>

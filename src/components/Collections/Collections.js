@@ -10,7 +10,7 @@ const Collections = () => {
       <div className='collections-container'>
         <div className='collection'>
             <p>Japanese,Minimalsim</p>
-            <h4>Neo Colection</h4>
+            <h4>Neo Basic Collection</h4>
             <Link to='/japanese-collection'>
               <p className='button-line'>View Collection <ArrowForwardOutlinedIcon/> </p>
             </Link>

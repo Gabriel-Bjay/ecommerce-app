@@ -135,9 +135,15 @@ const Header = () => {
                         </div>
                         <div className='collections'>
                           <h4>Collections</h4>
-                          <p>Japanese,Minimalsim</p>
-                          <p>Modern,Industrial</p>
-                          <p>Valebeck, Modern</p>
+                          <Link to='/japanese-collection'>
+                            <p>Japanese,Minimalsim</p>
+                          </Link>
+                          <Link to='/modern-collection'>
+                            <p>Modern,Industrial</p>
+                          </Link>
+                          <Link to='/valebeck-collection'>
+                            <p>Valebeck, Modern</p>
+                          </Link>  
                         </div>
                       </div>
                     </div>

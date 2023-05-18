@@ -16,6 +16,9 @@ import Beds from './components/Categories/Specifics/Beds/Beds';
 import Chairs from './components/Categories/Specifics/Chairs/Chairs';
 import Sofas from './components/Categories/Specifics/Sofas/Sofas';
 import Tables from './components/Categories/Specifics/Tables/Tables';
+import Japanese from './components/Collections/Packs/Japanese/Japanese';
+import Modern from './components/Collections/Packs/Modern/Modern';
+import Valebeck from './components/Collections/Packs/Valebeck/Valebeck';
 
 
 function App() {
@@ -40,6 +43,9 @@ function App() {
               <Route path='chairs' element={<Chairs/>}/>
               <Route path='sofas' element={<Sofas/>}/>
               <Route path='tables' element={<Tables/>}/>
+              <Route path='japanese-collection' element={<Japanese/>}/>
+              <Route path='modern-collection' element={<Modern/>}/>
+              <Route path='valebeck-collection' element={<Valebeck/>}/>
             </Routes>              
           </main>
        <Footer/>

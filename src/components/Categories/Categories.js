@@ -53,11 +53,11 @@ const Categories = () => {
 
       <div className='location-categories'>
 
-        <div className='room'>
-            <div className='room-description'>
-                <h5>Curate the best <br/>dining area</h5>
+        <div className='room1'>
+            <div className='room1-description'>
+                <h5 className='room1-text'>Curate the best <br/>dining area</h5>
                 <p>From dining tables,chairs,<br/>sideboards and more</p>
-                <button className='room-btn'>Dining Room</button>
+                <button className='room1-btn'>Dining Room</button>
             </div>
             <div className='demo-image'>
                 <img
@@ -68,11 +68,11 @@ const Categories = () => {
             </div>
         </div>
 
-        <div className='room'>
-        <div className='room-description'>
-            <h5>Style your cozy <br/>living room</h5>
+        <div className='room1'>
+        <div className='room1-description'>
+            <h5 className='room1-text'>Style your cozy <br/>living room</h5>
             <p>From sofas,coffee tables,side<br/> tables cabinets and more</p>
-            <button className='room-btn'>Living Room</button>
+            <button className='room1-btn'>Living Room</button>
         </div>
             <div className='demo-image'>
                 <img
@@ -83,12 +83,12 @@ const Categories = () => {
             </div>
         </div>
 
-        <div className='room'>
+        <div className='room1'>
 
-        <div className='room-description'>
-            <h5>Make your bedroom <br/>comfortable</h5>
+        <div className='room1-description'>
+            <h5 className='room1-text'>Make your bedroom <br/>comfortable</h5>
             <p>From bedframes, mattresses,<br/> bedside tables, and more</p>
-            <button className='room-btn'>Bedroom</button>
+            <button className='room1-btn'>Bedroom</button>
         </div>
             <div className='demo-image'>
                 <img

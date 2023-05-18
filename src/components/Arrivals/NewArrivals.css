@@ -2,14 +2,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 50px;
+    margin: 0 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 
+}
+
+.new-arrival-header{
+    font-size: 36px;
+    font-weight: 400;
+    color: #333333;
+    margin-top: 74px;
+    text-decoration: underline;
+    padding-left: 30px;
 }
 
 .arrival-images{
     width: 250px;
     height: 250px;
     border: 1px;
-    background-color: #f2f2f2d2;
 }
 
+.new-arrival{
+    width: 350px;
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 350px;
+    border: 1px;
+    background-color: #f2f2f2d2 ;
+    align-items: center;
+    display: block;
+
+}

@@ -6,57 +6,57 @@ const Tables = () => {
   return (
     <div className='tables-container'>
     <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/06/17-4-1-680x680-optimized.png' alt='' className='table-image'/>
-      <p className='table-text'>Brandi Single Bed Frame</p>
-      <p className='table-text'>$ 1,000</p>
+      <img src='https://neolivin.com/wp-content/uploads/2022/06/20-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Hiace Coffee Table</p>
+      <p className='table-text'>$ 65.44</p>
       <ShoppingBasket/>
     </div>
     <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/06/61-4-680x680-optimized.png' alt='' className='table-image'/>   
-      <p className='table-text'>Hayden Bed Frame</p>
-      <p className='table-text'>$ 1,430</p>
+      <img src='https://neolivin.com/wp-content/uploads/2022/08/29-1-768x768-optimized.png' alt='' className='table-image'/>   
+      <p className='table-text'>Lefty TV Cabinet</p>
+      <p className='table-text'>$ 430</p>
       <ShoppingBasket/>
     </div>
     <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/10/8-680x680-optimized.png' alt='' className='table-image'/>
-      <p className='table-text'>Solven Bed Frame</p>
-      <p className='table-text'>$ 1,300</p>
+      <img src='https://neolivin.com/wp-content/uploads/2022/06/20-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Flux Round Coffee Table</p>
+      <p className='table-text'>$ 64.84</p>
       <ShoppingBasket/>
     </div>
     <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/06/24-1-1-680x680-optimized.png' alt='' className='table-image'/>
-      <p className='table-text'>Crystal Bed Frame</p>
-      <p className='table-text'>$ 1,000</p>
+      <img src='https://neolivin.com/wp-content/uploads/2022/09/Untitled-design-85-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Nano Round Coffee Table</p>
+      <p className='table-text'>$ 96.86</p>
       <ShoppingBasket/>
     </div>
     <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/08/18334F4F-B3DA-42CF-B98F-48EEA783B986-680x680-optimized.jpeg' alt='' className='table-image'/>
-      <p className='table-text'>Neo Bed Frame</p>
-      <p className='table-text'>$ 700</p>
-      <ShoppingBasket/>
-    </div>
-    <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/06/1-1-4-680x680-optimized.png' alt='' className='table-image'/>
-      <p className='table-text'>Brandi Bed Frame</p>
-      <p className='table-text'>$ 1,200</p>
-      <ShoppingBasket/>
-    </div>
-    <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/06/R1Copy-of-HTH02655-600x600-1-optimized.jpg' alt='' className='table-image'/>
-      <p className='table-text'>HTH Bed Frame</p>
-      <p className='table-text'>$ 800</p>
-      <ShoppingBasket/>
-    </div>
-    <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2022/10/5-680x680-optimized.png' alt='' className='table-image'/>
-      <p className='table-text'>Solven Bed Frame</p>
+      <img src='https://neolivin.com/wp-content/uploads/2022/06/13-2-4-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Solven Tv Cabinet</p>
       <p className='table-text'>$ 970</p>
       <ShoppingBasket/>
     </div>
     <div className='table'>
-      <img src='https://neolivin.com/wp-content/uploads/2023/03/45-680x680-optimized.jpg' alt='' className='table-image'/>
-      <p className='table-text'>Hadley Single Bed Frame</p>
-      <p className='table-text'>$ 680</p>
+      <img src='https://neolivin.com/wp-content/uploads/2022/06/40-6-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Ponto Tv Cabinet</p>
+      <p className='table-text'>$ 1,200</p>
+      <ShoppingBasket/>
+    </div>
+    <div className='table'>
+      <img src='https://neolivin.com/wp-content/uploads/2023/05/74-768x768-optimized.jpg' alt='' className='table-image'/>
+      <p className='table-text'>Loftus TV Cabinet</p>
+      <p className='table-text'>$ 800</p>
+      <ShoppingBasket/>
+    </div>
+    <div className='table'>
+      <img src='https://neolivin.com/wp-content/uploads/2022/06/31-7-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Poet Nesting Coffee Table</p>
+      <p className='table-text'>$ 59.70</p>
+      <ShoppingBasket/>
+    </div>
+    <div className='table'>
+      <img src='https://neolivin.com/wp-content/uploads/2022/08/4-1-768x768-optimized.png' alt='' className='table-image'/>
+      <p className='table-text'>Breda Coffee Table</p>
+      <p className='table-text'>$ 63.80</p>
       <ShoppingBasket/>
     </div>
   </div>

@@ -162,12 +162,17 @@ const Header = () => {
                   </div>
               </div>
 
-              <div className='header_search'>
-                <input className="header_input" type="text" value={search}
-                onChange={(e) => setSearch(e.target.value)} placeholder="Search" />
-                <SearchIcon className="search_icon" 
-                  onClick={() => onSearch(search)}
-                />
+              <div className='search_container'>
+                <div className='header_search'>
+                  <input className="header_input" type="text" value={search}
+                    onChange={(e) => setSearch(e.target.value)} placeholder="Search" />
+                    <SearchIcon className="search_icon" 
+                      onClick={() => onSearch(search)}
+                    />
+                </div>
+                <div className='search-drop'>
+                  
+                </div>
               </div>
 
               <div className='login-section'>

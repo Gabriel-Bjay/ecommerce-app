@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom';
 const Categories = () => {
   return (
     <div className='categories-container'>
-      <h2>Shop By Categories</h2>
-      <p>Start exploring by choosing any furniture categories</p>
+      <h2 className='head'>Shop By Categories</h2>
+      <p className='sub-head'>Start exploring by choosing any furniture categories</p>
 
       <div className='categories-list'>
         <Link to='/sofas'>

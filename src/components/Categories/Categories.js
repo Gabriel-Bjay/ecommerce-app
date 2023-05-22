@@ -2,7 +2,7 @@ import React from 'react'
 import ChairOutlinedIcon from '@mui/icons-material/ChairOutlined';
 import ChairAltOutlinedIcon from '@mui/icons-material/ChairAltOutlined';
 import TableRestaurantOutlinedIcon from '@mui/icons-material/TableRestaurantOutlined';
-import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
+// import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
 import TableBarOutlinedIcon from '@mui/icons-material/TableBarOutlined';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import OutlinedFlagIcon from '@mui/icons-material/OutlinedFlag';
@@ -36,12 +36,12 @@ const Categories = () => {
                 <p>Tables</p>
             </div>
         </Link>
-        <Link to='/kitchen'>
+        {/* <Link to='/kitchen'>
             <div className='category'>
                 <KitchenOutlinedIcon className='icon' />
                 <p>Storages</p>
             </div>
-        </Link>
+        </Link> */}
 
         <Link to='/tables'>
             <div className='category'>

@@ -3,7 +3,6 @@ import "./Home.css"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import StorefrontIcon from '@mui/icons-material/Storefront';
-import FeaturedProducts from '../Products/FeaturedProducts';
 import Categories from '../Categories/Categories';
 import NewArrivals from '../Arrivals/NewArrivals';
 import Collections from '../Collections/Collections';
@@ -42,7 +41,7 @@ const Home = () => {
     
     <section>
       <div className='home-content'>
-          <div className='top-content'>
+          
           <Link to='/tables'>
             <button>Tv Cabinets</button> 
           </Link>
@@ -61,18 +60,17 @@ const Home = () => {
           <Link to='/tables'>
             <button>Dining Tables</button> 
           </Link>    
-          </div>
-          <div className='bottom-content'>
+          
+          
           <Link to='/chairs'>
             <button>Dining Chairs</button> 
           </Link>
           <Link to='/beds'>
             <button>Bed Frames</button>  
           </Link>  
-          </div>
+          
       </div>
     </section>
-    <FeaturedProducts/>
     <Categories/>
     <NewArrivals/>
     <Collections/>

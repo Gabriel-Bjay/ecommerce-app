@@ -45,4 +45,25 @@ button{
 
 .home-content {
     padding-top: 200px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.home-content button{
+    width: 8rem;
+    height: 3rem;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home-content button:hover{
+    background-color: #ebc08b;
 }

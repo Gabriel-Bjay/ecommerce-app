@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "urban-living-109cf",
+  "private_key_id": "69d11c3bbccd2f671c32ce0cdffab78be9061977",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDN/X4VSRfgnHJl\n62RP72THUMuDLPsWZTWbvkbaWlMLGEM4fDSWOWFqIPslAaiigoZMrAD/ROPhqY0/\n8g2oepKWWVlCDUjdGg4dBgfufPEMaxSjO5LfgsgGBlHNpPbVxOYh0fxs/plPO9Mf\njJaZ1vLxfgQNQRdsTNcd9u4jzkNGobZv5PLnIBuGXDQd6S+R8dczPLRCeTN4luDV\nmaWuNQ1rn3q8Z/5snvo4PqM6mCMk8Yog5bJcmC6GZ6S1lGiRCTGCV9/fIyLx0N8R\nC7veUebiHhfSCj7cH0NYzbqdNCow4/1rBlWjnXsFwvjWtMI8cw8J39juKLxYMmbk\nT0TGQuYbAgMBAAECggEAKsKu/DMuqjk/xCl/qtpKpNeAT6w0OTtsS/bNVYF/kKOK\nPL0H25Fwx+utxspX29hVka/5CwSde5hLUpVoQWukZ2KH1V7Vm9RPTrYUSm0UStwl\nrhbtT8mhxSJls9dFSC32CdpB2MxnPdvw4TE5iBjnWLsskyXKe3heBYHfgH5OV+hV\ngu3XQ+7472bGXZBDJItFJal+zKLPXFm7S+gKpnal74WruZ3CweZ8wX1NPbfL5Och\n8mmlVFnY3svtuMXZhpDT0JrQqEZR4mCEw3povUvb3HRmi0KnXa/dQDLwsaoLB/Us\niI3jmFl23e2TS49kKZlqHdCvWKwRK07CHr91D2/4xQKBgQDudMjOHt8YR+CoA+49\nn70PlWG/HUnTAjI2DLKw4z0hsq1R7RlWzUPovuuMktPrExrmnfCfpz123232cVbE\nqYsfnnMzP0hPmUWhjATF+tF3iux7VpDBa/TJTkH+UbaLnnb1UHc9kVv/QzOzMY3k\n20rLVZPr37nb0bpK0sUvW4qaxwKBgQDdJTnQnd93W84wFoGNARxyBJrA8Y7H1RIc\n4+regO+Af40Yr/egi00hkCrtk6jUDU2Ot7NSJEA1hLtKp0P3ds7MYV++c79ZbMPS\nQGzq/76fhpvE47MsDAGpxSTfbMFW1ySQ/s4NzU7eLTBhsJRvCPfybZNTQX7YtYOI\neZHDxUSmDQKBgQDBmN9POZE3TWQABPDv5zi/5jAt0cGWJzpM15JcOqHvMfm1giII\nby6rUBY9UxfqyuAUTDaH6Gfmkw/b/bjMgjoJucMd4Er9FRuLRPq7Ih/eRlQo7ucn\nolZi+b5qlDz4rfc2w9WLjvB6Fj1rRthE7iWTYC9wWXu0FFqDVQvynwexEQKBgHsK\n61AXhu5yNharbwl1RM5roW8Y98hX1OweI+AI/TkRvv+taKn617+E512oepcBj9WI\ngE2DvfYJE+xFhJt7jzRIOW1OGXk3+vxQvElEYluAGctCpb4sMAC1n/5wFGKs8bt7\nCkrDoM4ddn3kMbJV2x8XuJDqMBmDZNvaSDAU4k1BAoGAE7lf7PR9LfVkToXy6gES\nMQMgAm9kOhftONX2Jxh/Uf4xW/KO7exQX5zci1vLUqfBjdXx6zMk0hZWyvbXsdha\nF13OeiJpkdBNfK/Qc3ttloDBIV8rmU+ozPooudHkW9l3wZAOZZq1RD1FtsJ/KVWe\nyjVrCRH1xAzfh73bvEtZnfg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-qgh69@urban-living-109cf.iam.gserviceaccount.com",
+  "client_id": "112057913093112513150",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qgh69%40urban-living-109cf.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

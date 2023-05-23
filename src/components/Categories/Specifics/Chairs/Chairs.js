@@ -71,6 +71,8 @@
 import React from 'react';
 import "./Chairs.css"
 import productsData from '../../../../products.json';
+import { Save,ShoppingBasket } from '@mui/icons-material';
+
 
 function Chairs() {
   // Filter the products based on the category "chairs"
@@ -78,13 +80,20 @@ function Chairs() {
 
   return (
     <>
-      <h2>chairs</h2>
+      <h2>Chairs</h2>
       <div className='chairs-container'>
         {chairsData.map((chair) => (
           <div key={chair.id} className='chair'>
-            <h3>{chair.name}</h3>
             <img src={chair.image} alt={chair.name} className='chair-image' />
-            <p>Price: ${chair.price}</p>
+            <h3 className='chair-name'>{chair.name}</h3>
+            <p className='price-tag'>Price: ${chair.price}</p>
+            <div className='rating'>
+              <p>⭐⭐⭐⭐</p>
+            </div>
+            <div className='shop-save'>
+              <ShoppingBasket className='icon' />
+              <Save className='icon'/>
+            </div>
           </div>
         ))}
       </div>

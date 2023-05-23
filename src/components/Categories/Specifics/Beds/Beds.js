@@ -69,6 +69,7 @@
 import React from 'react';
 import "./Beds.css"
 import productsData from '../../../../products.json';
+import { Save, ShoppingBasket } from '@mui/icons-material';
 
 function Beds() {
   // Filter the products based on the category "Sofas"
@@ -80,14 +81,22 @@ function Beds() {
       <div className='beds-container'>
         {bedsData.map((bed) => (
           <div key={bed.id} className='bed'>
-            <h3>{bed.name}</h3>
             <img src={bed.image} alt={bed.name} className='bed-image' />
-            <p>Price: ${bed.price}</p>
+            <h3 className='bed-name'>{bed.name}</h3>
+            <p className='price-tag'>Price: ${bed.price}</p>
+            <div className='rating'>
+              <p>⭐⭐⭐⭐</p>
+            </div>
+            <div className='shop-save'>
+              <ShoppingBasket className='icon' />
+              <Save className='icon'/>
+            </div>
           </div>
         ))}
       </div>
     </>
   );
 }
+
 
 export default Beds;

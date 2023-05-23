@@ -12,7 +12,7 @@
 .chair{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     padding: 5px;
     padding-left: 15px;
     border: 2px solid #ccc;
@@ -27,4 +27,34 @@
     height: 300px;
     border-radius: 5px;
     object-fit: cover;
+}
+
+.chair-name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.chair .shop-save{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-right: 300px;
+}
+
+.shop-save .icon{
+    width: 20px;
+    height: 20px;
+}
+
+.price-tag{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+
 }

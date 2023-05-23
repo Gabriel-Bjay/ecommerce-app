@@ -68,6 +68,8 @@
 
 import React from 'react';
 import productsData from '../../../../products.json';
+import './Tables.css'
+import { Save, ShoppingBasket } from '@mui/icons-material';
 
 function Tables() {
   // Filter the products based on the category "Sofas"
@@ -79,9 +81,16 @@ function Tables() {
       <div className='tables-container'>
         {tablesData.map((table) => (
           <div key={table.id} className='table'>
-            <h3>{table.name}</h3>
             <img src={table.image} alt={table.name} className='table-image'/>
-            <p>Price: ${table.price}</p>
+            <h3 className='table-name'>{table.name}</h3>
+            <p className='price-tag'>Price: ${table.price}</p>
+            <div className='rating'>
+              <p>⭐⭐⭐⭐</p>
+            </div>
+            <div className='shop-save'>
+              <ShoppingBasket className='icon' />
+              <Save className='icon'/>
+            </div>
           </div>
         ))}
       </div>

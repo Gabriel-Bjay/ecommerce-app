@@ -3,7 +3,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LoginIcon from '@mui/icons-material/Login';
-import { BedOutlined, DiningOutlined, KitchenOutlined, LivingOutlined, MapsHomeWorkOutlined } from '@mui/icons-material';
+import { BedOutlined, DiningOutlined, KitchenOutlined, LivingOutlined, MapsHomeWorkOutlined, Save } from '@mui/icons-material';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import { Link } from 'react-router-dom';
 import "./Header.css"
@@ -11,7 +11,6 @@ import { useState } from 'react';
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import { useAuthState } from 'react-firebase-hooks/auth';
-import data from '../../'
 
 
 const Header = () => {
@@ -193,7 +192,9 @@ const Header = () => {
 
               <div className='shopping-basket'>
                 <ShoppingBasketIcon className='shopping-basket-icon'/>
+                <Save className='saved-icon'/>
               </div>
+
 
           </div>
           

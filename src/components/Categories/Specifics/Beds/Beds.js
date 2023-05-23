@@ -88,8 +88,8 @@ function Beds() {
               <p>⭐⭐⭐⭐</p>
             </div>
             <div className='shop-save'>
-              <ShoppingBasket className='icon' />
-              <Save className='icon'/>
+              <ShoppingBasket className='icon' /> 
+              <Save className='icon'/> 
             </div>
           </div>
         ))}

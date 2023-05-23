@@ -11,11 +11,14 @@ import { useState } from 'react';
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useContext } from "react";
+import CartContext from '../../context/CartContext';
 
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user] = useAuthState(auth);
+  const { cartItems } = useContext(CartContext);
 
 
 
@@ -191,7 +194,7 @@ const Header = () => {
               </div> */}
 
               <div className='shopping-basket'>
-                <ShoppingBasketIcon className='shopping-basket-icon'/>
+                <ShoppingBasketIcon className='shopping-basket-icon'/> {cartItems.length}
                 <Save className='saved-icon'/>
               </div>
 

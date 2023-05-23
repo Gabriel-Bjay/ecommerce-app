@@ -25,17 +25,9 @@ import {
     switch (action.type) {
       // If the action type is ADD_TO_CART, we want to add the item to the cartItems array
       case ADD_TO_CART:
-        if (!state.cartItems.find((item) => item.id === action.payload.id)) {
-          state.cartItems.push({
-            ...action.payload,
-            quantity: 1,
-          });
-        }
-  
         return {
           ...state,
-          ...sumItems(state.cartItems),
-          cartItems: [...state.cartItems],
+          cartItems: [...state.cartItems,action.payload],
         };
   
       // If the action type is REMOVE_ITEM, we want to remove the item from the cartItems array

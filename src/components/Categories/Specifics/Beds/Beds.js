@@ -69,17 +69,19 @@
 import React, {useContext} from 'react';
 import "./Beds.css"
 import productsData from '../../../../products.json';
-import { Save, ShoppingBasket } from '@mui/icons-material';
 import CartContext from '../../../../context/CartContext';
 
 function Beds({ id, image, title, price }) {
+  
   // Filter the products based on the category "Sofas"
   const bedsData = productsData.filter((product) => product.category === 'Beds');
   const cartContext = useContext(CartContext)
   const {addToCart} = cartContext;
+  
 
   const addToBasketHandler =()=>{
     addToCart({item :{id, image, title, price }});
+    
 };
 
   return (

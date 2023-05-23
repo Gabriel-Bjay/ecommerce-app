@@ -18,8 +18,7 @@ import CartContext from '../../context/CartContext';
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user] = useAuthState(auth);
-  const { cartItems } = useContext(CartContext);
-
+  const {  cartItems } = useContext(CartContext);
 
 
   const handleLogout = () => {
@@ -194,7 +193,8 @@ const Header = () => {
               </div> */}
 
               <div className='shopping-basket'>
-                <ShoppingBasketIcon className='shopping-basket-icon'/> {cartItems.length}
+                <ShoppingBasketIcon className='shopping-basket-icon'/> 
+                {cartItems?.length}
                 <Save className='saved-icon'/>
               </div>
 

@@ -65,22 +65,26 @@
 
 import React from 'react';
 import productsData from '../../../../products.json';
+import './Sofas.css'
 
 function Sofas() {
   // Filter the products based on the category "Sofas"
   const sofasData = productsData.filter((product) => product.category === 'Sofas');
 
   return (
-    <div>
+
+    <>
       <h2>Sofas</h2>
-      {sofasData.map((sofa) => (
-        <div key={sofa.id}>
-          <h3>{sofa.name}</h3>
-          <img src={sofa.image} alt={sofa.name} />
-          <p>Price: ${sofa.price}</p>
-        </div>
-      ))}
-    </div>
+      <div className='sofas-container'>
+        {sofasData.map((sofa) => (
+          <div key={sofa.id} className='sofa'>
+            <h3>{sofa.name}</h3>
+            <img src={sofa.image} alt={sofa.name} className='sofa-image'/>
+            <p>Price: ${sofa.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

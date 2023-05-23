@@ -69,6 +69,7 @@
 
 
 import React from 'react';
+import "./Chairs.css"
 import productsData from '../../../../products.json';
 
 function Chairs() {
@@ -76,16 +77,18 @@ function Chairs() {
   const chairsData = productsData.filter((product) => product.category === 'Chairs');
 
   return (
-    <div>
+    <>
       <h2>chairs</h2>
-      {chairsData.map((chair) => (
-        <div key={chair.id}>
-          <h3>{chair.name}</h3>
-          <img src={chair.image} alt={chair.name} />
-          <p>Price: ${chair.price}</p>
-        </div>
-      ))}
-    </div>
+      <div className='chairs-container'>
+        {chairsData.map((chair) => (
+          <div key={chair.id} className='chair'>
+            <h3>{chair.name}</h3>
+            <img src={chair.image} alt={chair.name} className='chair-image' />
+            <p>Price: ${chair.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

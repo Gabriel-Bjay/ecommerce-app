@@ -74,16 +74,18 @@ function Tables() {
   const tablesData = productsData.filter((product) => product.category === 'Tables');
 
   return (
-    <div>
+    <>
       <h2>Tables</h2>
-      {tablesData.map((table) => (
-        <div key={table.id}>
-          <h3>{table.name}</h3>
-          <img src={table.image} alt={table.name} />
-          <p>Price: ${table.price}</p>
-        </div>
-      ))}
-    </div>
+      <div className='tables-container'>
+        {tablesData.map((table) => (
+          <div key={table.id} className='table'>
+            <h3>{table.name}</h3>
+            <img src={table.image} alt={table.name} className='table-image'/>
+            <p>Price: ${table.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

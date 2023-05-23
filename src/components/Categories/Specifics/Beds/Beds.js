@@ -67,6 +67,7 @@
 
 
 import React from 'react';
+import "./Beds.css"
 import productsData from '../../../../products.json';
 
 function Beds() {
@@ -74,16 +75,18 @@ function Beds() {
   const bedsData = productsData.filter((product) => product.category === 'Beds');
 
   return (
-    <div>
-      <h2>Beds</h2>
-      {bedsData.map((bed) => (
-        <div key={bed.id}>
-          <h3>{bed.name}</h3>
-          <img src={bed.image} alt={bed.name} />
-          <p>Price: ${bed.price}</p>
-        </div>
-      ))}
-    </div>
+    <>
+    <h2>Beds</h2>
+      <div className='beds-container'>
+        {bedsData.map((bed) => (
+          <div key={bed.id} className='bed'>
+            <h3>{bed.name}</h3>
+            <img src={bed.image} alt={bed.name} className='bed-image' />
+            <p>Price: ${bed.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

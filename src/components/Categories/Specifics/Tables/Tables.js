@@ -66,15 +66,21 @@
 // export default Tables
 
 
-import React from 'react';
+import React, {useContext} from 'react';
 import productsData from '../../../../products.json';
 import './Tables.css'
-import { Save, ShoppingBasket } from '@mui/icons-material';
+import CartContext from '../../../../context/CartContext';
 
-function Tables() {
+function Tables({ id, image, title, price }) {
   // Filter the products based on the category "Sofas"
   const tablesData = productsData.filter((product) => product.category === 'Tables');
+  const cartContext = useContext(CartContext)
+  const {addToCart} = cartContext;
 
+  const addToBasketHandler =()=>{
+    addToCart({item :{id, image, title, price }});
+    
+};
   return (
     <>
       <h2>Tables</h2>
@@ -87,10 +93,8 @@ function Tables() {
             <div className='rating'>
               <p>⭐⭐⭐⭐</p>
             </div>
-            <div className='shop-save'>
-              <ShoppingBasket className='icon' />
-              <Save className='icon'/>
-            </div>
+              <button onClick={addToBasketHandler}>Add To Basket</button>
+              <button>Save</button>
           </div>
         ))}
       </div>

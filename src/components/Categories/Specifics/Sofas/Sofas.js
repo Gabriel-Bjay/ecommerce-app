@@ -63,14 +63,22 @@
 
 // Sofas.js
 
-import React from 'react';
+import React, {useContext} from 'react';
 import productsData from '../../../../products.json';
 import './Sofas.css'
-import { Save,ShoppingBasket } from '@mui/icons-material';
+import CartContext from '../../../../context/CartContext';
 
-function Sofas() {
+function Sofas({ id, image, title, price }) {
   // Filter the products based on the category "Sofas"
   const sofasData = productsData.filter((product) => product.category === 'Sofas');
+  const cartContext = useContext(CartContext)
+  const {addToCart} = cartContext;
+  
+
+  const addToBasketHandler =()=>{
+    addToCart({item :{id, image, title, price }});
+    
+};
 
   return (
 
@@ -85,10 +93,8 @@ function Sofas() {
             <div className='rating'>
               <p>⭐⭐⭐⭐</p>
             </div>
-            <div className='shop-save'>
-              <ShoppingBasket className='icon' />
-              <Save className='icon'/>
-            </div>
+              <button onClick={addToBasketHandler}>Add To Basket</button>
+              <button>Save</button>
           </div>
         ))}
       </div>

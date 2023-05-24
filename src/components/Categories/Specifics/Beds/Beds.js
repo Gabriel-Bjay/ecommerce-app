@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import productsData from '../../../../products.json';
 import productDetails from '../../../../productDetails.json';
 import './Beds.css'
+import CartContext from '../../../../context/CartContext';
 
 const Beds = ({ id, image, title, price }) => {
   const [selectedBed, setSelectedBed] = useState(null);
@@ -16,7 +17,13 @@ const Beds = ({ id, image, title, price }) => {
 
   // Filter the products based on the category "Beds"
   const bedsData = productsData.filter((product) => product.category === 'Beds');
+  const cartContext = useContext(CartContext)
+  const {addToCart} = cartContext;
 
+  const addToBasketHandler =()=>{
+    addToCart({item :{id, image, title, price }});
+    
+};  
   return (
     <>
       <h2>Beds</h2>
@@ -34,7 +41,7 @@ const Beds = ({ id, image, title, price }) => {
             <div className='rating'>
               <p>⭐⭐⭐⭐</p>
             </div>
-            <button>Add To Basket</button>
+            <button onClick={addToBasketHandler}>Add To Basket</button>
             <button>Save</button>
           </div>
         ))}

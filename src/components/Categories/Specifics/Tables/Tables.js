@@ -33,7 +33,7 @@ function Tables({ id, image, title, price }) {
             <h3 className='table-name'>{table.name}</h3>
             <p className='price-tag'>Price: {table.price}</p>
             <div className='rating'>
-              <p>⭐⭐⭐⭐</p>
+              <p>{table.rating}</p>
             </div>
               <button onClick={addToBasketHandler}>Add To Basket</button>
               <button>Save</button>

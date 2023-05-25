@@ -39,7 +39,7 @@ const Beds = ({ id, image, title, price }) => {
             <h3 className='bed-name'>{bed.name}</h3>
             <p className='price-tag'>Price: ${bed.price}</p>
             <div className='rating'>
-              <p>⭐⭐⭐⭐</p>
+              <p>{bed.rating}</p>
             </div>
             <button onClick={addToBasketHandler}>Add To Basket</button>
             <button>Save</button>

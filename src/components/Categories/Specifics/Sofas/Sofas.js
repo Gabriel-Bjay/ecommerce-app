@@ -36,7 +36,7 @@ function Sofas({ id, image, title, price }) {
             <h3 className='sofa-name'>{sofa.name}</h3>
             <p className='price-tag'>Price: {sofa.price}</p>
             <div className='rating'>
-              <p>⭐⭐⭐⭐</p>
+              <p>{sofa.rating}</p>
             </div>
               <button onClick={addToBasketHandler}>Add To Basket</button>
               <button>Save</button>

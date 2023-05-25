@@ -35,7 +35,7 @@ const Chairs =({ id, image, title, price })=> {
             <h3 className='chair-name'>{chair.name}</h3>
             <p className='price-tag'>Price: ${chair.price}</p>
             <div className='rating'>
-              <p>⭐⭐⭐⭐</p>
+              <p>{chair.rating}</p>
             </div>
               <button onClick={addToBasketHandler}>Add To Basket</button>
               <button>Save</button>

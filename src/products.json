@@ -4,6 +4,7 @@
       "name": "Brandi Single Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/06/17-4-1-680x680-optimized.png",
       "price": 1000,
+      "rating":"⭐⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -11,6 +12,7 @@
       "name": "Hayden Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/06/61-4-680x680-optimized.png",
       "price": 1430,
+      "rating":"⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -18,6 +20,7 @@
       "name": "Solven Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/10/8-680x680-optimized.png",
       "price": 1300,
+      "rating":"⭐⭐⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -25,6 +28,7 @@
       "name": "Crystal Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/06/24-1-1-680x680-optimized.png",
       "price": 1000,
+      "rating":"⭐⭐",
       "category": "Beds"
     },
     {
@@ -32,6 +36,7 @@
       "name": "Neo Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/08/18334F4F-B3DA-42CF-B98F-48EEA783B986-680x680-optimized.jpeg",
       "price": 700,
+      "rating":"⭐⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -39,6 +44,7 @@
       "name": "Brandi Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/06/1-1-4-680x680-optimized.png",
       "price": 1200,
+      "rating":"⭐⭐⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -46,6 +52,7 @@
       "name": "HTH Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/06/R1Copy-of-HTH02655-600x600-1-optimized.jpg",
       "price": 800,
+      "rating":"⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -53,6 +60,7 @@
       "name": "Solven Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2022/10/5-680x680-optimized.png",
       "price": 970,
+      "rating":"⭐⭐⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -60,6 +68,7 @@
       "name": "Hadley Single Bed Frame",
       "image": "https://neolivin.com/wp-content/uploads/2023/03/45-680x680-optimized.jpg",
       "price": 680,
+      "rating":"⭐⭐⭐⭐",
       "category": "Beds"
     },
     {
@@ -67,6 +76,7 @@
         "name": "Morocco Chair (Set of 2)",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/12-4-1-768x768-optimized.png",
         "price": 46.48,
+        "rating":"⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -74,6 +84,7 @@
         "name": "Beverly Chairs",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/84-3-768x768-optimized.png",
         "price": 43.40,
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -81,6 +92,7 @@
         "name": "Naida Chair",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/1-2-2-768x768-optimized.png",
         "price": 56.53,
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -88,6 +100,7 @@
         "name": "Neo Chair",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/Product-Image-for-Website-JPG-4-600x600-1-optimized.png",
         "price": 83.43,
+        "rating":"⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -95,6 +108,7 @@
         "name": "Hetty Counter Stool",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/38-2-2-680x680-optimized.png",
         "price": 65.47,
+        "rating":"⭐⭐",
         "category": "Chairs"
       },
       {
@@ -102,6 +116,7 @@
         "name": "Harry Chair (Set Of Two)",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/44-1-3-e1660561056595-768x768-optimized.png",
         "price": 65.64,
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -109,6 +124,7 @@
         "name": "Vezel Lounge Chair",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/26-680x680-optimized.png",
         "price": 60.59,
+        "rating":"⭐⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -116,6 +132,7 @@
         "name": "Lavin Chair",
         "image": "https://neolivin.com/wp-content/uploads/2022/08/87-768x768-optimized.png",
         "price": 45.70,
+        "rating":"⭐⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -123,6 +140,7 @@
         "name": "Samuel Chair(Set of 2)",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/40-2-2-768x768-optimized.png",
         "price": 67.80,
+        "rating":"⭐⭐⭐",
         "category": "Chairs"
       },
       {
@@ -130,6 +148,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/25-1-2-768x768-optimized.png",
         "name": "Aston Sofa",
         "price": "$624.76",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -137,6 +156,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/08/92-768x768-optimized.png",
         "name": "Tommy Sofa 1-Seater",
         "price": "$1,430",
+        "rating":"⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -144,6 +164,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/11/9-768x768-optimized.jpg",
         "name": "Franco sofa 3-seater",
         "price": "$1,300",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -151,6 +172,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/11/71-768x768-optimized.png",
         "name": "Starex Sofa",
         "price": "$1,000",
+        "rating":"⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -158,6 +180,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2023/03/11-4-768x768-optimized.jpg",
         "name": "Dzire Sofa",
         "price": "$240",
+        "rating":"⭐⭐",
         "category": "Sofas"
       },
       {
@@ -165,6 +188,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/71-4-768x768-optimized.png",
         "name": "Ceni Sofa 3 Seater",
         "price": "$1,200",
+        "rating":"⭐⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -172,6 +196,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/09/20-2-768x768-optimized.jpg",
         "name": "Sienta Sofa 3 -seater",
         "price": "$800",
+        "rating":"⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -179,6 +204,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/09/Untitled-design-84-768x768-optimized.png",
         "name": "Tucson Sofa 1 seater",
         "price": "$970",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Sofas"
       },
       {
@@ -186,6 +212,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/20-768x768-optimized.png",
         "name": "Hiace Coffee Table",
         "price": "$65.44",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -200,6 +227,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/20-768x768-optimized.png",
         "name": "Flux Round Coffee Table",
         "price": "$64.84",
+        "rating":"⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -207,6 +235,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/09/Untitled-design-85-768x768-optimized.png",
         "name": "Nano Round Coffee Table",
         "price": "$96.86",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -214,6 +243,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/13-2-4-768x768-optimized.png",
         "name": "Solven TV Cabinet",
         "price": "$970",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -221,6 +251,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/40-6-768x768-optimized.png",
         "name": "Ponto TV Cabinet",
         "price": "$1,200",
+        "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -228,6 +259,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2023/05/74-768x768-optimized.jpg",
         "name": "Loftus TV Cabinet",
         "price": "$800",
+        "rating":"⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -235,6 +267,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/06/31-7-768x768-optimized.png",
         "name": "Poet Nesting Coffee Table",
         "price": "$59.70",
+        "rating":"⭐⭐⭐",
         "category": "Tables"
       },
       {
@@ -242,6 +275,7 @@
         "image": "https://neolivin.com/wp-content/uploads/2022/08/4-1-768x768-optimized.png",
         "name": "Breda Coffee Table",
         "price": "$63.80",
+        "rating":"⭐⭐⭐⭐",
         "category": "Tables"
       }
   ]

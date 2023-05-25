@@ -19,11 +19,7 @@ import Tables from './components/Categories/Specifics/Tables/Tables';
 import Japanese from './components/Collections/Packs/Japanese/Japanese';
 import Modern from './components/Collections/Packs/Modern/Modern';
 import Valebeck from './components/Collections/Packs/Valebeck/Valebeck';
-
-
-
-
-
+import CheckOut from './components/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -51,6 +47,7 @@ function App() {
               <Route path='japanese-collection' element={<Japanese/>}/>
               <Route path='modern-collection' element={<Modern/>}/>
               <Route path='valebeck-collection' element={<Valebeck/>}/>
+              <Route path='check-out' element={<CheckOut/>}/>
             </Routes>              
           </main>
        <Footer/>

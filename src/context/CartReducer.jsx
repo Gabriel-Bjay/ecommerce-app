@@ -32,15 +32,18 @@ import {
   
       // If the action type is REMOVE_ITEM, we want to remove the item from the cartItems array
       case REMOVE_ITEM:
+        const updatedCartItems = state.cartItems.filter(
+          (item) => item.id !== action.payload.id
+        );
+        const { itemCount, total } = sumItems(updatedCartItems);
+
         return {
           ...state,
-          ...sumItems(
-            state.cartItems.filter((item) => item.id !== action.payload.id)
-          ),
-          cartItems: [
-            ...state.cartItems.filter((item) => item.id !== action.payload.id),
-          ],
+          cartItems: updatedCartItems,
+          itemCount,
+          total,
         };
+
   
       // If the action type is INCREASE, we want to increase the quantity of the particular item in the cartItems array
       case INCREASE:

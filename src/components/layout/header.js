@@ -191,12 +191,14 @@ const Header = () => {
                 </Link>
                 <p>Hello, <br/><em>Login/Register</em></p>
               </div> */}
-
-              <div className='shopping-basket'>
-                <ShoppingBasketIcon className='shopping-basket-icon'/> 
-                {cartItems?.length}
-                <Save className='saved-icon'/>
-              </div>
+              <Link to='/check-out'>
+                <div className='shopping-basket'>
+                  <ShoppingBasketIcon className='shopping-basket-icon'/> 
+                  {cartItems?.length}
+                  <Save className='saved-icon'/>
+                </div>
+              </Link>
+              
 
 
           </div>

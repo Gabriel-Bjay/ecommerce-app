@@ -20,10 +20,13 @@ const Beds = ({ id, image, title, price }) => {
   const cartContext = useContext(CartContext)
   const {addToCart} = cartContext;
 
-  const addToBasketHandler =()=>{
-    addToCart({item :{id, image, title, price }});
+  const addToBasketHandler = (bed) => {
+    const { id, image, name, price } = bed;
+    addToCart({ item: { id, image, title: name, price } });
+    console.log(bed);
+  };
+  
     
-};  
   return (
     <>
       <h2>Beds</h2>
@@ -41,7 +44,7 @@ const Beds = ({ id, image, title, price }) => {
             <div className='rating'>
               <p>{bed.rating}</p>
             </div>
-            <button onClick={addToBasketHandler}>Add To Basket</button>
+            <button onClick={() => addToBasketHandler(bed)}>Add To Basket</button>
             <button>Save</button>
           </div>
         ))}

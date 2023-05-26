@@ -4,7 +4,7 @@ import './Sofas.css'
 import productDetails from '../../../../productDetails.json';
 import CartContext from '../../../../context/CartContext';
 
-function Sofas({ id, image, title, price }) {
+function Sofas({ id,image,name,price,rating}) {
     const [selectedSofa, setSelectedSofa] = useState(null);
 
   const selectSofa = (sofaId) => {
@@ -20,8 +20,9 @@ function Sofas({ id, image, title, price }) {
   const {addToCart} = cartContext;
   
 
-  const addToBasketHandler =()=>{
-    addToCart({item :{id, image, title, price }});
+  const addToBasketHandler =(sofa)=>{
+    const {id,image,name,price,rating} = sofa
+    addToCart({id,image,name,price,rating});
     
 };
 
@@ -54,6 +55,7 @@ function Sofas({ id, image, title, price }) {
                   <img src={sofa.image} alt={sofa.name} />
                   <p>Price: ${sofa.price}</p>
                   <p>Description: {sofa.description}</p>
+                  <p>Rating : {sofa.rating}</p>
                   {/* Render other relevant details */}
                 </div>
               ))}

@@ -5,7 +5,7 @@ import productDetails from '../../../../productDetails.json';
 import CartContext from '../../../../context/CartContext';
 
 
-const Chairs =({ id, image, title, price })=> {
+const Chairs =({ id, image, title, price,rating })=> {
   const [selectedChair, setSelectedChair] = useState(null);
 
   const selectChair = (chairId) => {
@@ -21,8 +21,9 @@ const Chairs =({ id, image, title, price })=> {
   const cartContext = useContext(CartContext)
   const {addToCart} = cartContext;
 
-  const addToBasketHandler =()=>{
-    addToCart({item :{id, image, title, price }});
+  const addToBasketHandler =(chair)=>{
+    const {id,image,name,price,rating} = chair
+    addToCart({id, image, name, price,rating });
     
 };
   return (
@@ -53,6 +54,7 @@ const Chairs =({ id, image, title, price })=> {
                   <img src={chair.image} alt={chair.name} />
                   <p>Price: ${chair.price}</p>
                   <p>Description: {chair.description}</p>
+                  <p>Rating: {chair.rating}</p>
                   {/* Render other relevant details */}
                 </div>
               ))}

@@ -4,7 +4,7 @@ import productDetails from '../../../../productDetails.json';
 import './Tables.css'
 import CartContext from '../../../../context/CartContext';
 
-function Tables({ id, image, title, price }) {
+function Tables({ id, image, title, price,rating }) {
   const [selectedTable, setSelectedTable] = useState(null);
 
   const selectTable = (tableId) => {
@@ -19,8 +19,9 @@ function Tables({ id, image, title, price }) {
   const cartContext = useContext(CartContext)
   const {addToCart} = cartContext;
 
-  const addToBasketHandler =()=>{
-    addToCart({item :{id, image, title, price }});
+  const addToBasketHandler =(table)=>{
+    const {id,image,name,price,rating} = table
+    addToCart({id,image,name,price,rating });
     
 };
   return (
@@ -51,6 +52,7 @@ function Tables({ id, image, title, price }) {
                   <img src={table.image} alt={table.name} />
                   <p>Price: ${table.price}</p>
                   <p>Description: {table.description}</p>
+                  <p>Rating: {table.rating}</p>
                   {/* Render other relevant details */}
                 </div>
               ))}

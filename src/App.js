@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/layout/Header';
@@ -19,7 +20,7 @@ import Tables from './components/Categories/Specifics/Tables/Tables';
 import Japanese from './components/Collections/Packs/Japanese/Japanese';
 import Modern from './components/Collections/Packs/Modern/Modern';
 import Valebeck from './components/Collections/Packs/Valebeck/Valebeck';
-import CheckOut from './components/CheckOut/CheckOut';
+import Cart from './components/CheckOut/Cart';
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
               <Route path='japanese-collection' element={<Japanese/>}/>
               <Route path='modern-collection' element={<Modern/>}/>
               <Route path='valebeck-collection' element={<Valebeck/>}/>
-              <Route path='check-out' element={<CheckOut/>}/>
+              <Route path='cart' element={<Cart/>}/>
             </Routes>              
           </main>
        <Footer/>

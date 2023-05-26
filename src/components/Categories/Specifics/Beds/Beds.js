@@ -3,6 +3,7 @@ import productsData from '../../../../products.json';
 import productDetails from '../../../../productDetails.json';
 import './Beds.css'
 import CartContext from '../../../../context/CartContext';
+import CheckOut from '../../../CheckOut/CheckOut'
 
 const Beds = ({ id, image, title, price }) => {
   const [selectedBed, setSelectedBed] = useState(null);
@@ -22,8 +23,8 @@ const Beds = ({ id, image, title, price }) => {
 
   const addToBasketHandler = (bed) => {
     const { id, image, name, price } = bed;
-    addToCart({ item: { id, image, title: name, price } });
-    console.log(bed);
+    addToCart({ id, image, name, price });
+    console.log();
   };
   
     
@@ -66,7 +67,9 @@ const Beds = ({ id, image, title, price }) => {
           </div>
         </div>
       )}
+      <CheckOut products={cartContext.cartItems}/>
     </>
+
   );
 };
 

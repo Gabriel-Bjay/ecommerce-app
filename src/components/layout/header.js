@@ -191,7 +191,7 @@ const Header = () => {
                 </Link>
                 <p>Hello, <br/><em>Login/Register</em></p>
               </div> */}
-              <Link to='/check-out'>
+              <Link to='/cart'>
                 <div className='shopping-basket'>
                   <ShoppingBasketIcon className='shopping-basket-icon'/> 
                   {cartItems?.length}

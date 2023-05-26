@@ -1,4 +1,4 @@
-import SearchIcon from '@mui/icons-material/Search';
+// import SearchIcon from '@mui/icons-material/Search'; 
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -162,10 +162,10 @@ const Header = () => {
 
               <div className='search_container'>
                 <div className='header_search'>
-                  <input className="header_input" type="text" 
-                     placeholder="Search" />
-                    <SearchIcon className="search_icon" 
-                    />
+                  <input className="header_input" 
+                     type="text" 
+                     placeholder="Search" 
+                     />
                 </div>
                 <div className='search-drop'>
                   

@@ -3,7 +3,7 @@ import productsData from '../../../../products.json';
 import productDetails from '../../../../productDetails.json';
 import './Beds.css'
 import CartContext from '../../../../context/CartContext';
-import CheckOut from '../../../CheckOut/CheckOut'
+import Cart from '../../../CheckOut/Cart'
 
 const Beds = ({ id, image, title, price }) => {
   const [selectedBed, setSelectedBed] = useState(null);
@@ -67,7 +67,6 @@ const Beds = ({ id, image, title, price }) => {
           </div>
         </div>
       )}
-      <CheckOut products={cartContext.cartItems}/>
     </>
 
   );

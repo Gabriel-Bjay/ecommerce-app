@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import CartState from './context/CartState'
+import CartState from './context/CartState';   
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,10 +12,12 @@ root.render(
     <BrowserRouter>
       <CartState>
         <App />
-      </CartState>  
+      </CartState>
     </BrowserRouter>
-  </React.StrictMode>
-);
+    </React.StrictMode>
+    );
+
+      
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -55,6 +55,12 @@ import {
           ...sumItems(state.cartItems),
           cartItems: [...state.cartItems],
         };
+
+        case 'LOAD_CART_ITEMS':
+          return {
+            ...state,
+            cartItems: action.payload,
+          };  
   
       // If the action type is DECREASE, we want to decrease the quantity of the particular item in the cartItems array
       case DECREASE:

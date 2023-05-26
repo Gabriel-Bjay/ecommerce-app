@@ -17,28 +17,18 @@
     const addToCart = (product) => {
       dispatch({ type: "ADD_TO_CART", payload: product });
     };
+// Load cart items from localStorage when the component mounts
+useEffect(() => {
+  const storedCartItems = localStorage.getItem('cartItems');
+  if (storedCartItems) {
+    dispatch({ type: 'LOAD_CART_ITEMS', payload: JSON.parse(storedCartItems) });
+  }
+}, []);
 
-    
-  // Function to load cart items from localStorage
-  const loadCartItems = () => {
-    const savedCartItems = localStorage.getItem('cartItems');
-    if (savedCartItems) {
-      dispatch({ type: 'SET_CART_ITEMS', payload: JSON.parse(savedCartItems) });
-    }
-  };
-
-  // Function to save cart items to localStorage
-  const saveCartItems = (items) => {
-    localStorage.setItem('cartItems', JSON.stringify(items));
-  };
-
-  useEffect(() => {
-    loadCartItems();
-  }, []);
-
-  useEffect(() => {
-    saveCartItems(state.cartItems);
-  }, [state.cartItems]);
+// Save cart items to localStorage whenever cartItems state changes
+useEffect(() => {
+  localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+}, [state.cartItems]);
 
     //Function to handle when an item that is in the cart is added again
     const increase = (payload) => {

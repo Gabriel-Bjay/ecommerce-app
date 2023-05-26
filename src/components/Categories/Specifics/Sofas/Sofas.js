@@ -39,7 +39,7 @@ function Sofas({ id,image,name,price,rating}) {
             <div className='rating'>
               <p>{sofa.rating}</p>
             </div>
-              <button onClick={addToBasketHandler}>Add To Basket</button>
+              <button onClick={()=>addToBasketHandler(sofa)}>Add To Basket</button>
               <button>Save</button>
           </div>
         ))}

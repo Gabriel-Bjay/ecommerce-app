@@ -47,31 +47,47 @@ import {
   
       // If the action type is INCREASE, we want to increase the quantity of the particular item in the cartItems array
       case INCREASE:
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === action.payload.id)
-        ].quantity++;
+  {
+    const updatedCartItems = state.cartItems.map((item) => {
+      if (item.id === action.payload.id) {
         return {
-          ...state,
-          ...sumItems(state.cartItems),
-          cartItems: [...state.cartItems],
+          ...item,
+          quantity: item.quantity + 1,
         };
+      }
+      return item;
+    });
+    return {
+      ...state,
+      ...sumItems(updatedCartItems),
+      cartItems: updatedCartItems,
+    };
+  }
+
+case DECREASE:
+  {
+    const updatedCartItems = state.cartItems.map((item) => {
+      if (item.id === action.payload.id) {
+        return {
+          ...item,
+          quantity: item.quantity - 1,
+        };
+      }
+      return item;
+    });
+    return {
+      ...state,
+      ...sumItems(updatedCartItems),
+      cartItems: updatedCartItems,
+    };
+  }
+
 
         case 'LOAD_CART_ITEMS':
           return {
             ...state,
             cartItems: action.payload,
           };  
-  
-      // If the action type is DECREASE, we want to decrease the quantity of the particular item in the cartItems array
-      case DECREASE:
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === action.payload.id)
-        ].quantity--;
-        return {
-          ...state,
-          ...sumItems(state.cartItems),
-          cartItems: [...state.cartItems],
-        };
   
       // If the action type is CHECKOUT, we want to clear the cartItems array and set the checkout to true
       case CHECKOUT:

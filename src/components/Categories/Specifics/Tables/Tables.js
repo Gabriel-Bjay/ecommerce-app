@@ -36,7 +36,7 @@ function Tables({ id, image, title, price,rating }) {
             <div className='rating'>
               <p>{table.rating}</p>
             </div>
-              <button onClick={addToBasketHandler}>Add To Basket</button>
+              <button onClick={()=>addToBasketHandler(table)}>Add To Basket</button>
               <button>Save</button>
           </div>
         ))}

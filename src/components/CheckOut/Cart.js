@@ -1,3 +1,59 @@
+import React, { useContext } from 'react';
+import CartContext  from '../../context/CartContext';
+import './Cart.css'
+
+function Cart() {
+  const { cartItems, removeFromCart, increase, decrease } = useContext(CartContext);
+
+  const handleDecreaseQuantity = (id) =>{
+    decrease(id);
+  }
+
+  const handleIncreaseQuantity = (id) =>{
+    increase(id);
+  }
+
+  const handleRemoveFromCart = (id) =>{
+    removeFromCart(id);
+    }
+  
+  return (
+    <>
+    <h2 className='cart-header'>Cart</h2>
+      <div className='cart-container'>
+        {cartItems.length === 0 ? (
+          <p>Hello</p>
+        ) : (
+          <div>
+            {cartItems.map((item) => (
+              <div key={item.id} >
+                <div className='items-container'>
+                  <img src={item.image}
+                    alt={item.name}
+                    className='item-image'/>
+                </div>
+                <h4>{item.name}</h4>
+                <p>Price :{item.price}</p>
+                <p>Rating : {item.rating}</p>
+                <div className='quantity'>
+                  <button onClick={() => handleDecreaseQuantity(item.id)}> - </button>
+                  {/* <span>{item.quantity}</span> */}
+                  <button onClick={() => handleIncreaseQuantity(item.id)}> + </button>
+                </div>
+                {/* <p>Total : {item.total}</p> */}
+                <button onClick={() => handleRemoveFromCart(item.id)}>Remove From Cart</button>
+              </div>
+              
+            ))}
+          </div>
+        )}
+      </div>  
+    </>
+  );
+}
+
+export default Cart;
+
 // import React, { useContext } from "react";
 // import { useNavigate } from "react-router-dom";
 // import CartContext from "../../context/CartContext";
@@ -62,30 +118,4 @@
 // export default Cart;
 
 
-import React, { useContext } from 'react';
-import CartContext  from '../../context/CartContext';
 
-function Cart() {
-  const { cartItems } = useContext(CartContext);
-
-  return (
-    <div>
-      <h1>Cart Page</h1>
-      {cartItems.length === 0 ? (
-        <p>No items in the cart.</p>
-      ) : (
-        <ul>
-          {cartItems.map((item) => (
-            <li key={item.id}>
-            <img src={item.image} alt={item.name} />
-              {item.name} - {item.price}
-              
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
-
-export default Cart;

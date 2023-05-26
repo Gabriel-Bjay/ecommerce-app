@@ -32,13 +32,16 @@ const Chairs =({ id, image, title, price,rating })=> {
       <div className='chairs-container'>
         {chairsData.map((chair) => (
           <div key={chair.id} className='chair'>
-            <img src={chair.image} alt={chair.name} className='chair-image'  onClick={()=>selectChair(chair.id)}/>
+            <img src={chair.image}
+             alt={chair.name} 
+             className='chair-image'
+             onClick={()=>selectChair(chair.id)}/>
             <h3 className='chair-name'>{chair.name}</h3>
             <p className='price-tag'>Price: ${chair.price}</p>
             <div className='rating'>
               <p>{chair.rating}</p>
             </div>
-              <button onClick={addToBasketHandler}>Add To Basket</button>
+              <button onClick={()=>addToBasketHandler(chair)}>Add To Basket</button>
               <button>Save</button>
           </div>
         ))}

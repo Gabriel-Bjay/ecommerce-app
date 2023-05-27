@@ -37,10 +37,10 @@ function Cart() {
                 <p>Rating : {item.rating}</p>
                 <div className='quantity'>
                   <button onClick={() => handleDecreaseQuantity(item.id)}> - </button>
-                  {/* <span>{item.quantity}</span> */}
+                  <p>Number:{item.quantity}</p>
                   <button onClick={() => handleIncreaseQuantity(item.id)}> + </button>
                 </div>
-                {/* <p>Total : {item.total}</p> */}
+                <p>Total : {item.total * item.quantity}</p>
                 <button onClick={() => handleRemoveFromCart(item.id)}>Remove From Cart</button>
               </div>
               

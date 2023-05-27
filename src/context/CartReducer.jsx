@@ -1,114 +1,208 @@
-// /src/Context/Cart/CartReducer.jsx
+// // /src/Context/Cart/CartReducer.jsx
 
-//Import the Action types
+// //Import the Action types
+// import {
+//     REMOVE_ITEM,
+//     ADD_TO_CART,
+//     INCREASE,
+//     DECREASE,
+//     CHECKOUT,
+//     CLEAR,
+//   } from "./CartTypes.js";
+  
+//   // Export function to calculate the total price of the cart and the total quantity of the cart
+//   export const sumItems = (cartItems) => {
+//     // Remove the incorrect Storage function call
+//     // Storage(cartItems);
+  
+//     let itemCount = cartItems.reduce((total, product) => total + product.quantity, 0);
+//     let total = cartItems.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+//     return { itemCount, total };
+//   };
+//   // The reducer is listening for an action, which is the type that we defined in the CartTypes.js file
+//   const CartReducer = (state, action) => {
+//     // The switch statement is checking the type of action that is being passed in
+//     switch (action.type) {
+//       // If the action type is ADD_TO_CART, we want to add the item to the cartItems array
+//       case ADD_TO_CART:
+//         return {
+//           ...state,
+//           cartItems: [...state.cartItems,action.payload],
+//         };
+  
+//       // If the action type is REMOVE_ITEM, we want to remove the item from the cartItems array
+//       case REMOVE_ITEM:
+//         const updatedCartItems = state.cartItems.filter(
+//           (item) => item.id !== action.payload.id
+//         );
+//         const { itemCount, total } = sumItems(updatedCartItems);
+
+//         return {
+//           ...state,
+//           cartItems: updatedCartItems,
+//           itemCount,
+//           total,
+//         };
+
+  
+//       // If the action type is INCREASE, we want to increase the quantity of the particular item in the cartItems array
+//       case INCREASE:
+//   {
+//     const updatedCartItems = state.cartItems.map((item) => {
+//       if (item.id === action.payload.id) {
+//         return {
+//           ...item,
+//           quantity: item.quantity + 1,
+//         };
+//       }
+//       return item;
+//     });
+//     return {
+//       ...state,
+//       ...sumItems(updatedCartItems),
+//       cartItems: updatedCartItems,
+//     };
+//   }
+
+// case DECREASE:
+//   {
+//     const updatedCartItems = state.cartItems.map((item) => {
+//       if (item.id === action.payload.id) {
+//         return {
+//           ...item,
+//           quantity: item.quantity - 1,
+//         };
+//       }
+//       return item;
+//     });
+//     return {
+//       ...state,
+//       ...sumItems(updatedCartItems),
+//       cartItems: updatedCartItems,
+//     };
+//   }
+
+
+//         case 'LOAD_CART_ITEMS':
+//           return {
+//             ...state,
+//             cartItems: action.payload,
+//           };  
+  
+//       // If the action type is CHECKOUT, we want to clear the cartItems array and set the checkout to true
+//       case CHECKOUT:
+//         return {
+//           cartItems: [],
+//           checkout: true,
+//           ...sumItems([]),
+//         };
+  
+//       //If the action type is CLEAR, we want to clear the cartItems array
+//       case CLEAR:
+//         return {
+//           cartItems: [],
+//           ...sumItems([]),
+//         };
+  
+//       //Return the state if the action type is not found
+//       default:
+//         return state;
+//     }
+//   };
+  
+//   export default CartReducer;
+  
+
+// CartReducer.jsx
+
+// CartReducer.jsx
+
 import {
-    REMOVE_ITEM,
-    ADD_TO_CART,
-    INCREASE,
-    DECREASE,
-    CHECKOUT,
-    CLEAR,
-  } from "./CartTypes.js";
-  
-  // Export function to calculate the total price of the cart and the total quantity of the cart
-  export const sumItems = (cartItems) => {
-    // Remove the incorrect Storage function call
-    // Storage(cartItems);
-  
-    let itemCount = cartItems.reduce((total, product) => total + product.quantity, 0);
-    let total = cartItems.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
-    return { itemCount, total };
-  };
-  // The reducer is listening for an action, which is the type that we defined in the CartTypes.js file
-  const CartReducer = (state, action) => {
-    // The switch statement is checking the type of action that is being passed in
-    switch (action.type) {
-      // If the action type is ADD_TO_CART, we want to add the item to the cartItems array
-      case ADD_TO_CART:
-        return {
-          ...state,
-          cartItems: [...state.cartItems,action.payload],
-        };
-  
-      // If the action type is REMOVE_ITEM, we want to remove the item from the cartItems array
-      case REMOVE_ITEM:
-        const updatedCartItems = state.cartItems.filter(
-          (item) => item.id !== action.payload.id
+  REMOVE_ITEM,
+  ADD_TO_CART,
+  INCREASE,
+  DECREASE,
+  CHECKOUT,
+  CLEAR,
+} from "./CartTypes.js";
+
+export const sumItems = (cartItems) => {
+  let itemCount = cartItems.reduce((total, product) => total + product.quantity, 0);
+  let total = cartItems.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+  return { itemCount, total };
+};
+
+const CartReducer = (state, action) => {
+  switch (action.type) {
+    case ADD_TO_CART:
+      const existingItem = state.cartItems.find(item => item.id === action.payload.id);
+      if (existingItem) {
+        const updatedCartItems = state.cartItems.map(item =>
+          item.id === action.payload.id ? { ...item, quantity: item.quantity + 1 } : item
         );
-        const { itemCount, total } = sumItems(updatedCartItems);
-
         return {
           ...state,
+          ...sumItems(updatedCartItems),
           cartItems: updatedCartItems,
-          itemCount,
-          total,
         };
-
-  
-      // If the action type is INCREASE, we want to increase the quantity of the particular item in the cartItems array
-      case INCREASE:
-  {
-    const updatedCartItems = state.cartItems.map((item) => {
-      if (item.id === action.payload.id) {
+      } else {
+        const newItem = {
+          ...action.payload,
+          quantity: 1,
+        };
         return {
-          ...item,
-          quantity: item.quantity + 1,
+          ...state,
+          ...sumItems([...state.cartItems, newItem]),
+          cartItems: [...state.cartItems, newItem],
         };
       }
-      return item;
-    });
-    return {
-      ...state,
-      ...sumItems(updatedCartItems),
-      cartItems: updatedCartItems,
-    };
+
+    case REMOVE_ITEM:
+      const updatedCartItems = state.cartItems.filter(item => item.id !== action.payload.id);
+      return {
+        ...state,
+        ...sumItems(updatedCartItems),
+        cartItems: updatedCartItems,
+      };
+
+    case INCREASE:
+      const increasedCartItems = state.cartItems.map(item =>
+        item.id === action.payload.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      return {
+        ...state,
+        ...sumItems(increasedCartItems),
+        cartItems: increasedCartItems,
+      };
+
+    case DECREASE:
+      const decreasedCartItems = state.cartItems.map(item =>
+        item.id === action.payload.id ? { ...item, quantity: item.quantity - 1 } : item
+      );
+      return {
+        ...state,
+        ...sumItems(decreasedCartItems),
+        cartItems: decreasedCartItems.filter(item => item.quantity > 0),
+      };
+
+    case CHECKOUT:
+      return {
+        ...state,
+        cartItems: [],
+        checkout: true,
+        ...sumItems([]),
+      };
+
+    case CLEAR:
+      return {
+        ...state,
+        cartItems: [],
+        ...sumItems([]),
+      };
+
+    default:
+      return state;
   }
+};
 
-case DECREASE:
-  {
-    const updatedCartItems = state.cartItems.map((item) => {
-      if (item.id === action.payload.id) {
-        return {
-          ...item,
-          quantity: item.quantity - 1,
-        };
-      }
-      return item;
-    });
-    return {
-      ...state,
-      ...sumItems(updatedCartItems),
-      cartItems: updatedCartItems,
-    };
-  }
-
-
-        case 'LOAD_CART_ITEMS':
-          return {
-            ...state,
-            cartItems: action.payload,
-          };  
-  
-      // If the action type is CHECKOUT, we want to clear the cartItems array and set the checkout to true
-      case CHECKOUT:
-        return {
-          cartItems: [],
-          checkout: true,
-          ...sumItems([]),
-        };
-  
-      //If the action type is CLEAR, we want to clear the cartItems array
-      case CLEAR:
-        return {
-          cartItems: [],
-          ...sumItems([]),
-        };
-  
-      //Return the state if the action type is not found
-      default:
-        return state;
-    }
-  };
-  
-  export default CartReducer;
-  
+export default CartReducer;

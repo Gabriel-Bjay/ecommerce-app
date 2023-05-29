@@ -21,6 +21,8 @@ import Japanese from './components/Collections/Packs/Japanese/Japanese';
 import Modern from './components/Collections/Packs/Modern/Modern';
 import Valebeck from './components/Collections/Packs/Valebeck/Valebeck';
 import Cart from './components/CheckOut/Cart';
+import Payment from './components/Payment/Payment';
+import SavedItems from './components/SavedItems/SavedItems';
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
               <Route path='modern-collection' element={<Modern/>}/>
               <Route path='valebeck-collection' element={<Valebeck/>}/>
               <Route path='cart' element={<Cart/>}/>
+              <Route path='payment' element={<Payment/>}/>
+              <Route path='saved' element={<SavedItems/>}/>
             </Routes>              
           </main>
        <Footer/>

@@ -14,7 +14,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useContext } from "react";
 import CartContext from '../../context/CartContext';
 
-
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user] = useAuthState(auth);

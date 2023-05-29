@@ -18,6 +18,9 @@ function Sofas({ id,image,name,price,rating}) {
   const sofasData = productsData.filter((product) => product.category === 'Sofas');
   const cartContext = useContext(CartContext)
   const {addToCart} = cartContext;
+
+  // Adding the saving feature
+
   
 
   const addToBasketHandler =(sofa)=>{

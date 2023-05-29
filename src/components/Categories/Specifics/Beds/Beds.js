@@ -4,9 +4,9 @@ import productDetails from '../../../../productDetails.json';
 import './Beds.css'
 import CartContext from '../../../../context/CartContext';
 
-
 const Beds = ({ id, image, title, price,rating }) => {
   const [selectedBed, setSelectedBed] = useState(null);
+
 
   const selectBed = (bedId) => {
     setSelectedBed(bedId);
@@ -16,6 +16,7 @@ const Beds = ({ id, image, title, price,rating }) => {
     setSelectedBed(null);
   };
 
+  
   // Filter the products based on the category "Beds"
   const bedsData = productsData.filter((product) => product.category === 'Beds');
   const cartContext = useContext(CartContext)

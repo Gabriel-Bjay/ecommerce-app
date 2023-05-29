@@ -14,15 +14,15 @@ const Home = () => {
     <div>
     <section>
       <div className='home'>
-          <div className='home-container'>
-            <img src='https://www.innovationsofabeds.com.au/wp-content/uploads/2015/02/SPLITBACK-FREJ-SOFA-EIK-CHAIR-521-MIXED-DANCE-GREY-1.jpg'
+          <img src='https://www.innovationsofabeds.com.au/wp-content/uploads/2015/02/SPLITBACK-FREJ-SOFA-EIK-CHAIR-521-MIXED-DANCE-GREY-1.jpg'
               alt=''
               className='home-image'/>
+          <div className='home-container'>    
             <div className='insights'>
-              <h4>Aesthetic Home Furniture & Lifestyle</h4>
-              <h1>Make Your <u>dream space</u> a reality</h1>
+              <h4 className='home-head'>Aesthetic Home Furniture & Lifestyle</h4>
+              <h1 className='home-subhead'>Make Your <u>dream space</u> a reality</h1>
 
-              <div>
+              <div className='redirect-btns'>
                   <div className='redirect'>
                     <AddToPhotosIcon className='icon'/>
                     <h6>Ideas</h6>

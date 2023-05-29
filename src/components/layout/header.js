@@ -171,7 +171,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className='login-section'>
+              {/* <div className='login-section'>
                 {user ? (
                   <>
                     <LoginIcon onClick={handleLogout}/>
@@ -182,7 +182,7 @@ const Header = () => {
                     <LoginIcon/>
                   </Link>
                 )}
-              </div>
+              </div> */}
 
               <Link to='/cart'>
                 <div className='shopping-basket'>
@@ -195,20 +195,32 @@ const Header = () => {
               <div className='profile-tag'>
                 <div className='profile-section'>
                   <img src='https://media.istockphoto.com/id/587805078/vector/profile-picture-vector-illustration.jpg?s=612x612&w=0&k=20&c=sUCdx-Likqe7eBEcbn1FT8ybOQQHXDgBKLsJc99MtCA=' alt='' className='profile-avatar'/>
-                  <ExpandMore/>
-                </div>
-                <div className='profile-overlay-container'>
-                  <div className='settings'>
-                    <p>Settings</p>
-                    <Settings/>
-                  </div>
-                  <div className='logout'>
-                    <p>Logout</p>
-                    <LogoutOutlined/>
-                  </div>
-                  <div className='saved'>
-                    <p>Saved</p>
-                    <Save/>
+                  <ExpandMore/>          
+                  <div className='profile-overlay-container'>
+                    <div className='settings'>
+                      <p>Settings</p>
+                      <Settings/>
+                    </div>
+                    <div className='logout'>
+      
+                      {user ? (
+                        <div className='login-logout'>
+                          <p>Log Out</p>
+                          <LoginIcon onClick={handleLogout}/>                       
+                        </div>
+                      ) : (
+                        <Link to='/login'>
+                        <div className='login-logout'>
+                          <p>Login</p>
+                          <LoginIcon/>
+                        </div>  
+                        </Link>
+                      )}
+                    </div>
+                    <div className='saved'>
+                      <p>Saved</p>
+                      <Save/>
+                    </div>
                   </div>
                 </div>
               </div>

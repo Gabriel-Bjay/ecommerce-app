@@ -3,7 +3,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LoginIcon from '@mui/icons-material/Login';
-import { BedOutlined, DiningOutlined, KitchenOutlined, LivingOutlined, MapsHomeWorkOutlined, Save } from '@mui/icons-material';
+import {  BedOutlined, DiningOutlined, ExpandMore, KitchenOutlined, LivingOutlined, LogoutOutlined, MapsHomeWorkOutlined, Save, Settings } from '@mui/icons-material';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import { Link } from 'react-router-dom';
 import "./Header.css"
@@ -184,12 +184,6 @@ const Header = () => {
                 )}
               </div>
 
-              {/* <div className='login-section'>
-                <Link to="/login">
-                  <LoginIcon className='login-icon'/> 
-                </Link>
-                <p>Hello, <br/><em>Login/Register</em></p>
-              </div> */}
               <Link to='/cart'>
                 <div className='shopping-basket'>
                   <ShoppingBasketIcon className='shopping-basket-icon'/> 
@@ -198,6 +192,26 @@ const Header = () => {
                 </div>
               </Link>
               
+              <div className='profile-tag'>
+                <div className='profile-section'>
+                  <img src='https://media.istockphoto.com/id/587805078/vector/profile-picture-vector-illustration.jpg?s=612x612&w=0&k=20&c=sUCdx-Likqe7eBEcbn1FT8ybOQQHXDgBKLsJc99MtCA=' alt='' className='profile-avatar'/>
+                  <ExpandMore/>
+                </div>
+                <div className='profile-overlay-container'>
+                  <div className='settings'>
+                    <p>Settings</p>
+                    <Settings/>
+                  </div>
+                  <div className='logout'>
+                    <p>Logout</p>
+                    <LogoutOutlined/>
+                  </div>
+                  <div className='saved'>
+                    <p>Saved</p>
+                    <Save/>
+                  </div>
+                </div>
+              </div>
 
 
           </div>

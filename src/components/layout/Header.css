@@ -1,6 +1,6 @@
 .alert{
-    background-color: rgb(47, 47, 47);
-    color: white;
+    background-color: antiquewhite;
+    color: rgba(0, 0, 0, 0.814);
 }
 .alert-1{
     padding-left: 1rem;
@@ -27,6 +27,14 @@
     width: 4rem;
     height: 4rem;
     margin-left: 1rem;
+}
+
+.profile-avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+
 }
 
 .categories{
@@ -125,3 +133,23 @@
 .shopping-basket{
     margin-right: 30px;
 }  
+
+.profile-tag{
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.profile-overlay-container{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-tag:hover .profile-overlay-container{
+    display: block;
+}

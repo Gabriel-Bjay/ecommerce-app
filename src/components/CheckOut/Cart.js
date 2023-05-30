@@ -2,19 +2,22 @@ import React, { useContext } from 'react';
 import CartContext  from '../../context/CartContext';
 import './Cart.css'
 
-function Cart() {
+function Cart({ id, image, name, price,rating }) {
   const { cartItems, removeFromCart, increase, decrease } = useContext(CartContext);
 
-  const handleDecreaseQuantity = (id) =>{
-    decrease(id);
+  const handleDecreaseQuantity = (item) =>{
+    const { id, image, name, price,rating } = item
+    decrease({ id, image, name, price,rating });
   }
 
-  const handleIncreaseQuantity = (id) =>{
-    increase(id);
+  const handleIncreaseQuantity = (item) =>{
+    const { id, image, name, price,rating } = item
+    increase({ id, image, name, price,rating });
   }
 
-  const handleRemoveFromCart = (id) =>{
-    removeFromCart(id);
+  const handleRemoveFromCart = (item) =>{
+    const { id, image, name, price,rating } = item
+    removeFromCart({ id, image, name, price,rating });
     }
   
   return (
@@ -36,12 +39,12 @@ function Cart() {
                 <p>Price :{item.price}</p>
                 <p>Rating : {item.rating}</p>
                 <div className='quantity'>
-                  <button onClick={() => handleDecreaseQuantity(item.id)} className='btn'> - </button>
+                  <button onClick={() => handleDecreaseQuantity(item)} className='btn'> - </button>
                   <p>{item.quantity}</p>
-                  <button onClick={() => handleIncreaseQuantity(item.id)} className='btn'> + </button>
+                  <button onClick={() => handleIncreaseQuantity(item)} className='btn'> + </button>
                 </div>
                 {/* <p>Total : {item.total * item.quantity}</p> */}
-                <button onClick={() => handleRemoveFromCart(item.id)}>Remove From Cart</button>
+                <button onClick={() => handleRemoveFromCart(item)}>Remove From Cart</button>
               </div>
               
             ))}

@@ -51,7 +51,7 @@ const Header = () => {
                 <p>Shop <br/>By <u>Categories</u></p>
                 <div className='drop-down-list'>
                   <div className='room'>
-                    <Link to='livingroom'>
+                    <Link to='sofas'>
                       <LivingOutlined/>
                       <p>Living Room</p>
                       <ArrowRightOutlinedIcon/>
@@ -59,28 +59,28 @@ const Header = () => {
                   </div>
 
                   <div className='room'>
-                    <Link to="/bedroom">
+                    <Link to="/beds">
                       <BedOutlined/>
                       <p>Bed Room</p>
                       <ArrowRightOutlinedIcon/>
                     </Link>  
                   </div>
                   <div className='room'>
-                    <Link to="/diningroom">
+                    <Link to="/tables">
                     <DiningOutlined/>
                     <p>Dining Room</p>
                     <ArrowRightOutlinedIcon/>
                     </Link>
                   </div>
                   <div className='room'>
-                  <Link to="/kitchen">
+                  <Link to="/tables">
                     <KitchenOutlined/>
                     <p>Kitchen</p>
                     <ArrowRightOutlinedIcon/>
                   </Link>   
                   </div>
                   <div className='room'>
-                  <Link to="/office">
+                  <Link to="/tables">
                     <MapsHomeWorkOutlined/>
                     <p>Office</p>
                     <ArrowRightOutlinedIcon/>

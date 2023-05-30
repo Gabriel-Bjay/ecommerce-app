@@ -1,98 +1,57 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import CartContext from '../../context/CartContext'
-import Cart from '../CheckOut/Cart'
-import { useContext } from 'react'
+import "./Payment.css"
+import { loadStripe } from '@stripe/stripe-js';
+
 
 const Payment = () => {
-    const cartContext = useContext(CartContext)
-    const {cartItems} = cartContext
+  const stripePromise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const stripe = await stripePromise;
+    
+    const response = await fetch('/create-payment-intent', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        amount: 1000, // Replace with the actual payment amount
+        currency: 'usd' // Replace with the desired currency
+      })
+    });
+    const {clientSecret} =await response.json();
+  }
+
 
   return (
     <div className='payment'>
         <div className='payment-container'>
             <h2>Payment Page</h2>
+            <form className='payment-form'>
+              <div>
+                <label htmlFor='email'>Email</label>
+                <input type='email' id='email' placeholder='Enter Email'/>
+              </div>
+              <div>
+                <label htmlFor="cardNumber">Card Number</label>
+                <input
+                  type="password"
+                  id="cardNumber"
+                  placeholder='**** **** **** ****'
+                />
+              </div>
+              <div className='row-form'>
+                  <label htmlFor="expiryDate">Expiry Date</label>
+                  <input type="text" id="expiryDate" placeholder='mm / yy'/>
+
+                  <label htmlFor="cvv">CVV</label>
+                  <input type="text" id="cvv" placeholder='***' />    
+              </div>
+              <button type="submit">Make Payment</button>        
+            </form>
         </div>
     </div>
   )
 }
 
-export default Payment
-
-
-// import React, {useState} from 'react'
-// import { CardElement,useElements, useStripe } from '@stripe/react-stripe-js'
-// import axios from 'axios'
-
-// const CARD_OPTIONS ={
-//     iconStyle: "solid", 
-//     style: {
-//         base :{
-//             iconColor : "#c4f0ff",
-//             color: "#fff",
-//             fontWeight: 500,
-//             fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif ",
-//             fontSize: "16px",
-//             fontSmoothing: "antialiased",
-//             ":-webkit-autofill" : {color : "#fce883"},
-//             "::placeholder": {color : "#87bbfd"}
-//         },
-//         invalid:{
-//             iconColor: "#ffc7ee",
-//             color: "ffc7ee",
-//         }
-//     }
-// }
-
-// export default function Payment() {
-//     const [success, setSuccess] = useState(false)
-//     const  stripe = useStripe()
-//     const elements = useElements()
-//     const handleSubmit = async (e) => {
-//         e.preventDefault()
-//         const {error, paymentMethod} = await stripe.createPaymentMethod({
-//             type: "card",
-//             card: elements.getElement(CardElement)
-//         })
-        
-//         if (!error) {
-//             try {
-//                 const  {id} = paymentMethod
-//                 const response = await axios.post("http://localhost:4000/payment", {
-//                     amount: 1000,
-//                     id
-//                 })
-
-//                 if (response.data.success) {
-//                     console.log('Successful payment')
-//                     setSuccess(true)
-//                 }
-//             } catch (error) {
-//                 console.log("Error", error)
-//             }
-//         }else{
-//             console.log(error.message)
-//         }
-//     }    
-
-//   return (
-//     <>
-//      {
-//         !success?
-//         <form onSubmit={handleSubmit}>
-//             <fieldset className='form-group'>
-//                 <div className='form-row'>
-//                     <CardElement options={CARD_OPTIONS}/>
-//                 </div>
-//             </fieldset>
-//             <button>Pay</button>
-//         </form>
-//         :
-//         <div>
-//             <h2>Payment Successful</h2>
-//         </div>
-//      } 
-//     </>
-//   )
-// }
-
+export default Payment;

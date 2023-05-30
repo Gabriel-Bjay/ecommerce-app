@@ -30,7 +30,7 @@ const Beds = ({ id, image, title, price,rating }) => {
     
   return (
     <>
-      <h2>Beds</h2>
+      <h2 className='category-header'>Beds</h2>
       <div className='beds-container'>
         {bedsData.map((bed) => (
           <div key={bed.id} className='bed'>

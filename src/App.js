@@ -55,9 +55,7 @@ function App() {
               <Route path='modern-collection' element={<Modern/>}/>
               <Route path='valebeck-collection' element={<Valebeck/>}/>
               <Route path='cart' element={<Cart/>}/>
-              <Elements stripe={stripePromise}>
-                  <Route path='payment' element={<Payment/>}/>
-              </Elements>
+              <Route path="/payment" element={<Elements stripe={stripePromise}><Payment /></Elements>} />
               <Route path='saved' element={<SavedItems/>}/>
             </Routes>              
           </main>

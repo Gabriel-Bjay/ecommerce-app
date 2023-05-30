@@ -9,7 +9,7 @@ const Payment = () => {
     event.preventDefault();
     const stripe = await stripePromise;
     
-    const response = await fetch('/create-payment-intent', {
+    const response = await fetch('http://localhost:5000/create-payment-intent ', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

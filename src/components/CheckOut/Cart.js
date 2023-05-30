@@ -39,7 +39,7 @@ function Cart({ id, image, name, price,rating }) {
     };
 
     const checkOut = () =>{
-        fetch('/create-checkout-session', {
+        fetch('http://localhost3000/create-checkout-session', {
           method: 'POST',
           headers: {
             'Content-Type' : 'application/json'
@@ -51,8 +51,8 @@ function Cart({ id, image, name, price,rating }) {
           if(res.ok) return res.json()
           return res.json().then(json => Promise.reject(json))
         }).then(({ url }) =>{
-          console.log(url)
-          // window.location.href = url;
+          // console.log(url)
+          window.location.href = url;
         }).catch(e =>{
             console.error(e.error)
         })

@@ -32,7 +32,7 @@ function Tables({ id, image, title, price,rating }) {
           <div key={table.id} className='table'>
             <img src={table.image} alt={table.name} className='table-image' onClick={()=>selectTable(table.id)} />
             <h3 className='table-name'>{table.name}</h3>
-            <p className='price-tag'>Price: {table.price}</p>
+            <p className='price-tag'>Price: ${table.price}</p>
             <div className='rating'>
               <p>{table.rating}</p>
             </div>

@@ -179,7 +179,7 @@
         "id": 23,
         "image": "https://neolivin.com/wp-content/uploads/2023/03/11-4-768x768-optimized.jpg",
         "name": "Dzire Sofa",
-        "price": "$240",
+        "price": 240,
         "rating":"⭐⭐",
         "category": "Sofas"
       },

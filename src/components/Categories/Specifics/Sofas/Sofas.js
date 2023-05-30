@@ -38,7 +38,7 @@ function Sofas({ id,image,name,price,rating}) {
           <div key={sofa.id} className='sofa'>
             <img src={sofa.image} alt={sofa.name} className='sofa-image' onClick={()=>selectSofa(sofa.id)} />
             <h3 className='sofa-name'>{sofa.name}</h3>
-            <p className='price-tag'>Price: {sofa.price}</p>
+            <p className='price-tag'>Price: ${sofa.price}</p>
             <div className='rating'>
               <p>{sofa.rating}</p>
             </div>

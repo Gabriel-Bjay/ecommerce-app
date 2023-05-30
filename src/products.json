@@ -75,7 +75,7 @@
         "id": 10,
         "name": "Morocco Chair (Set of 2)",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/12-4-1-768x768-optimized.png",
-        "price": 46.48,
+        "price": 46.45,
         "rating":"⭐⭐⭐",
         "category": "Chairs"
       },
@@ -83,7 +83,7 @@
         "id": 11,
         "name": "Beverly Chairs",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/84-3-768x768-optimized.png",
-        "price": 43.40,
+        "price": 43.42,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Chairs"
       },
@@ -123,7 +123,7 @@
         "id": 16,
         "name": "Vezel Lounge Chair",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/26-680x680-optimized.png",
-        "price": 60.59,
+        "price": 60.52,
         "rating":"⭐⭐⭐⭐",
         "category": "Chairs"
       },
@@ -131,7 +131,7 @@
         "id": 17,
         "name": "Lavin Chair",
         "image": "https://neolivin.com/wp-content/uploads/2022/08/87-768x768-optimized.png",
-        "price": 45.70,
+        "price": 45.73,
         "rating":"⭐⭐⭐⭐",
         "category": "Chairs"
       },
@@ -139,7 +139,7 @@
         "id": 18,
         "name": "Samuel Chair(Set of 2)",
         "image": "https://neolivin.com/wp-content/uploads/2022/06/40-2-2-768x768-optimized.png",
-        "price": 67.80,
+        "price": 67.88,
         "rating":"⭐⭐⭐",
         "category": "Chairs"
       },
@@ -147,7 +147,7 @@
         "id": 19,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/25-1-2-768x768-optimized.png",
         "name": "Aston Sofa",
-        "price": "$624.76",
+        "price": 624.76,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Sofas"
       },
@@ -155,7 +155,7 @@
         "id": 20,
         "image": "https://neolivin.com/wp-content/uploads/2022/08/92-768x768-optimized.png",
         "name": "Tommy Sofa 1-Seater",
-        "price": "$1,430",
+        "price": 1430,
         "rating":"⭐⭐⭐",
         "category": "Sofas"
       },
@@ -163,7 +163,7 @@
         "id": 21,
         "image": "https://neolivin.com/wp-content/uploads/2022/11/9-768x768-optimized.jpg",
         "name": "Franco sofa 3-seater",
-        "price": "$1,300",
+        "price": 1300,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Sofas"
       },
@@ -171,7 +171,7 @@
         "id": 22,
         "image": "https://neolivin.com/wp-content/uploads/2022/11/71-768x768-optimized.png",
         "name": "Starex Sofa",
-        "price": "$1,000",
+        "price": 1000,
         "rating":"⭐⭐⭐",
         "category": "Sofas"
       },
@@ -187,7 +187,7 @@
         "id": 24,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/71-4-768x768-optimized.png",
         "name": "Ceni Sofa 3 Seater",
-        "price": "$1,200",
+        "price": 1200,
         "rating":"⭐⭐⭐⭐",
         "category": "Sofas"
       },
@@ -195,7 +195,7 @@
         "id": 25,
         "image": "https://neolivin.com/wp-content/uploads/2022/09/20-2-768x768-optimized.jpg",
         "name": "Sienta Sofa 3 -seater",
-        "price": "$800",
+        "price": 800,
         "rating":"⭐⭐⭐",
         "category": "Sofas"
       },
@@ -203,7 +203,7 @@
         "id": 26,
         "image": "https://neolivin.com/wp-content/uploads/2022/09/Untitled-design-84-768x768-optimized.png",
         "name": "Tucson Sofa 1 seater",
-        "price": "$970",
+        "price": 970,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Sofas"
       },
@@ -211,7 +211,7 @@
         "id": 27,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/20-768x768-optimized.png",
         "name": "Hiace Coffee Table",
-        "price": "$65.44",
+        "price": 65.44,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
@@ -219,14 +219,14 @@
         "id": 28,
         "image": "https://neolivin.com/wp-content/uploads/2022/08/29-1-768x768-optimized.png",
         "name": "Lefty TV Cabinet",
-        "price": "$430",
+        "price": 430,
         "category": "Tables"
       },
       {
         "id": 29,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/20-768x768-optimized.png",
         "name": "Flux Round Coffee Table",
-        "price": "$64.84",
+        "price": 64.84,
         "rating":"⭐⭐⭐",
         "category": "Tables"
       },
@@ -234,7 +234,7 @@
         "id": 30,
         "image": "https://neolivin.com/wp-content/uploads/2022/09/Untitled-design-85-768x768-optimized.png",
         "name": "Nano Round Coffee Table",
-        "price": "$96.86",
+        "price": 96.86,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
@@ -242,7 +242,7 @@
         "id": 31,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/13-2-4-768x768-optimized.png",
         "name": "Solven TV Cabinet",
-        "price": "$970",
+        "price": 970,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
@@ -250,7 +250,7 @@
         "id": 32,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/40-6-768x768-optimized.png",
         "name": "Ponto TV Cabinet",
-        "price": "$1,200",
+        "price": 1200,
         "rating":"⭐⭐⭐⭐⭐",
         "category": "Tables"
       },
@@ -258,7 +258,7 @@
         "id": 33,
         "image": "https://neolivin.com/wp-content/uploads/2023/05/74-768x768-optimized.jpg",
         "name": "Loftus TV Cabinet",
-        "price": "$800",
+        "price": 800,
         "rating":"⭐⭐⭐",
         "category": "Tables"
       },
@@ -266,7 +266,7 @@
         "id": 34,
         "image": "https://neolivin.com/wp-content/uploads/2022/06/31-7-768x768-optimized.png",
         "name": "Poet Nesting Coffee Table",
-        "price": "$59.70",
+        "price": 59.76,
         "rating":"⭐⭐⭐",
         "category": "Tables"
       },
@@ -274,7 +274,7 @@
         "id": 35,
         "image": "https://neolivin.com/wp-content/uploads/2022/08/4-1-768x768-optimized.png",
         "name": "Breda Coffee Table",
-        "price": "$63.80",
+        "price": 63.87,
         "rating":"⭐⭐⭐⭐",
         "category": "Tables"
       }

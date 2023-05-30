@@ -1,10 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import CartContext  from '../../context/CartContext';
 import './Cart.css'
 
 function Cart({ id, image, name, price,rating }) {
-  const { cartItems, removeFromCart, increase, decrease } = useContext(CartContext);
+  const { cartItems,setCartItems, removeFromCart, increase, decrease } = useContext(CartContext);
 
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
+  }, [setCartItems]);
+
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
+  
   const handleDecreaseQuantity = (item) =>{
     const { id, image, name, price,rating } = item
     decrease({ id, image, name, price,rating });

@@ -19,6 +19,11 @@ function Cart({ id, image, name, price,rating }) {
     const { id, image, name, price,rating } = item
     removeFromCart({ id, image, name, price,rating });
     }
+
+    const calculateTotalPrice = () => {
+      const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+      return totalPrice.toFixed(2); // Round off to two decimal places
+    };
   
   return (
     <>
@@ -36,7 +41,7 @@ function Cart({ id, image, name, price,rating }) {
                     className='item-image'/>
                 </div>
                 <h4>{item.name}</h4>
-                <p>Price :{item.price}</p>
+                <p>Price :${item.price}</p>
                 <p>Rating : {item.rating}</p>
                 <div className='quantity'>
                   <button onClick={() => handleDecreaseQuantity(item)} className='btn'> - </button>
@@ -51,6 +56,11 @@ function Cart({ id, image, name, price,rating }) {
           </div>
         )}
       </div>  
+
+      <div className='total-count'>
+        <p>Total Items : {cartItems.reduce((total, item) => total + item.quantity, 0)}</p>
+        <p>Total Price: {calculateTotalPrice()}</p>
+      </div>
     </>
   );
 }

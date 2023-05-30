@@ -20,7 +20,25 @@ const Payment = () => {
       })
     });
     const {clientSecret} =await response.json();
-  }
+
+    const result = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: {
+          // Collect card details from the form
+          number: document.getElementById('cardNumber').value,
+          exp_month: document.getElementById('expiryDate').value.slice(0, 2),
+          exp_year: document.getElementById('expiryDate').value.slice(3),
+          cvc: document.getElementById('cvv').value
+        }
+      }
+    });
+
+    if (result.error) {
+      console.log(result.error.message);
+    } else {
+      console.log('Payment succeeded:', result.paymentIntent);
+    }
+  };
 
 
   return (
@@ -47,7 +65,7 @@ const Payment = () => {
                   <label htmlFor="cvv">CVV</label>
                   <input type="text" id="cvv" placeholder='***' />    
               </div>
-              <button type="submit">Make Payment</button>        
+              <button type="submit" onClick={handleSubmit}>Make Payment</button>        
             </form>
         </div>
     </div>

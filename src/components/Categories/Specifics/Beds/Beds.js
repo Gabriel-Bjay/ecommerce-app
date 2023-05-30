@@ -1,6 +1,6 @@
 import React, { useState,useContext } from 'react';
-import productsData from '../../../../products.json';
-import productDetails from '../../../../productDetails.json';
+import productDetails from '../../../../productDetails.json'
+import productsData from '../../../../products.json'
 import './Beds.css'
 import CartContext from '../../../../context/CartContext';
 

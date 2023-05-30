@@ -188,7 +188,6 @@ const Header = () => {
                 <div className='shopping-basket'>
                   <ShoppingBasketIcon className='shopping-basket-icon'/> 
                   {cartItems?.length}
-                  <Save className='saved-icon'/>
                 </div>
               </Link>
               

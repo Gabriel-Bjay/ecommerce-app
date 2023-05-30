@@ -22,12 +22,12 @@ function Cart() {
     <h2 className='cart-header'>Cart</h2>
       <div className='cart-container'>
         {cartItems.length === 0 ? (
-          <p>Hello</p>
+          <p className='cart-p'>Hello You Have Not Yet Added Any Items To Cart</p>
         ) : (
           <div>
             {cartItems.map((item) => (
-              <div key={item.id} >
-                <div className='items-container'>
+              <div key={item.id} className='items-container'>
+                <div >
                   <img src={item.image}
                     alt={item.name}
                     className='item-image'/>
@@ -36,11 +36,11 @@ function Cart() {
                 <p>Price :{item.price}</p>
                 <p>Rating : {item.rating}</p>
                 <div className='quantity'>
-                  <button onClick={() => handleDecreaseQuantity(item.id)}> - </button>
-                  <p>Number:{item.quantity}</p>
-                  <button onClick={() => handleIncreaseQuantity(item.id)}> + </button>
+                  <button onClick={() => handleDecreaseQuantity(item.id)} className='btn'> - </button>
+                  <p>{item.quantity}</p>
+                  <button onClick={() => handleIncreaseQuantity(item.id)} className='btn'> + </button>
                 </div>
-                <p>Total : {item.total * item.quantity}</p>
+                {/* <p>Total : {item.total * item.quantity}</p> */}
                 <button onClick={() => handleRemoveFromCart(item.id)}>Remove From Cart</button>
               </div>
               

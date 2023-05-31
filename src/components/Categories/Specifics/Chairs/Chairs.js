@@ -24,7 +24,6 @@ const Chairs =({ id, image, title, price,rating })=> {
   const addToBasketHandler =(chair)=>{
     const {id,image,name,price,rating} = chair
     addToCart({id, image, name, price,rating });
-    
 };
   return (
     <>

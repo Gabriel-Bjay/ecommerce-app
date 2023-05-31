@@ -22,11 +22,11 @@ import Modern from './components/Collections/Packs/Modern/Modern';
 import Valebeck from './components/Collections/Packs/Valebeck/Valebeck';
 import Cart from './components/CheckOut/Cart';
 import Payment from './components/Payment/Payment';
-import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 import SavedItems from './components/SavedItems/SavedItems';
 
-const stripePromise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
+const promise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
 
 function App() {
   return (
@@ -55,7 +55,14 @@ function App() {
               <Route path='modern-collection' element={<Modern/>}/>
               <Route path='valebeck-collection' element={<Valebeck/>}/>
               <Route path='cart' element={<Cart/>}/>
-              <Route path="/payment" element={<Payment />} />
+              <Route
+                path="/payment"
+                element={
+                  <Elements stripe={promise}>
+                    <Payment />
+                  </Elements>
+                }
+              />
               <Route path='saved' element={<SavedItems/>}/>
             </Routes>              
           </main>

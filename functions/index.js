@@ -11,6 +11,11 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.status(200).send("Hello World!"));
 
+app.post("/payments/create", async (req, res) =>{
+  const total = req.query.total;
+  console.log("Payment Request Received", total);
+});
+
 exports.api = functions.https.onRequest(app);
 
 

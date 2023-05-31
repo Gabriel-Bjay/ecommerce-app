@@ -2,17 +2,22 @@ import React, { useContext, useEffect, useState } from 'react'
 import axios from '../../axios'
 import './Payment.css'
 import CartContext from '../../context/CartContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import Cart from '../CheckOut/Cart'
 
 const Payment = () => {
     const cartContext = useContext(CartContext)
     const {cartItems}  = cartContext;
     const [succeeded, setSucceeded]= useState(false);
+    const [disabled, setDisabled]= useState(true);
     const [processing, setProcessing]= useState("");
     const [error, setError]= useState(null);
     const [clientSecret, setClientSecret]= useState(true);
     const [total, setTotal] = useState(0); 
+    const stripe = useStripe();
+    const elements = useElements();
+    const navigate =useNavigate();
 
 
 
@@ -30,15 +35,34 @@ const Payment = () => {
 
       const getClientSecret = async () => {
         const response = await axios({
-            method: 'POST',
-            url: `/payments/create?total=${total(cartItems) * 100} `
+            method: 'post',
+            url: `/payments/create?total=${total * 100} `
         });
         setClientSecret(response.data.clientSecret) 
       }; 
       getClientSecret();     
-    }, [cartItems])
+    }, [total])
 
     console.log("The Secret is =>", clientSecret)
+
+    const handleSubmit = async(e) =>{
+      e.preventDefault();
+      setProcessing(true)
+
+      const payload = await stripe.confirmCardPayment(clientSecret, {payment_method:
+         {card: elements.getElement(CardElement)}
+      }).then(({paymentIntent}) =>{
+        setSucceeded(true)
+        setError(null)
+        setProcessing(false)
+        navigate("/cart")
+      })
+    };
+
+    const handleChange = (e) =>{
+        setDisabled(e.empty);
+        setError(e.error? 'e.error.message' : "")
+    }
   return (
     <div className='payment'>
       <div className='payment-container'>
@@ -62,6 +86,15 @@ const Payment = () => {
           </div>
           <div className='payment-details'>
             {/* Stripe Code Will Go Here */}
+            <form onSubmit={handleSubmit}>
+              <CardElement onChange={handleChange}/>
+              <div className='payment-price-container'>
+                <button disabled={processing || disabled || succeeded}>
+                  <span>{processing? <p>Processing</p> : "Buy Now"}</span>
+                </button>
+              </div>
+              {error && <div>{error}</div>}
+            </form>
           </div>
         </div>
       </div>

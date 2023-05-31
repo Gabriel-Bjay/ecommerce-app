@@ -7,6 +7,7 @@ function Cart({ id, image, name, price,rating }) {
   const { cartItems,setCartItems, removeFromCart, increase, decrease } = useContext(CartContext);
 
   const navigate = useNavigate();
+
   useEffect(() => {
     const storedCartItems = localStorage.getItem('cartItems');
     if (storedCartItems) {
@@ -38,25 +39,25 @@ function Cart({ id, image, name, price,rating }) {
       return totalPrice.toFixed(0); // Round off to two decimal places
     };
 
-    const checkOut = () =>{
-        fetch('http://localhost3000/create-checkout-session', {
-          method: 'POST',
-          headers: {
-            'Content-Type' : 'application/json'
-          },
-          body: JSON.stringify({
-            items: [cartItems]
-          })
-        }).then(res =>{
-          if(res.ok) return res.json()
-          return res.json().then(json => Promise.reject(json))
-        }).then(({ url }) =>{
-          // console.log(url)
-          window.location.href = url;
-        }).catch(e =>{
-            console.error(e.error)
-        })
-    }
+    // const checkOut = () =>{
+    //     fetch('/create-checkout-session', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type' : 'application/json'
+    //       },
+    //       body: JSON.stringify({
+    //         items: [cartItems]
+    //       })
+    //     }).then(res =>{
+    //       if(res.ok) return res.json()
+    //       return res.json().then(json => Promise.reject(json))
+    //     }).then(({ url }) =>{
+    //       console.log(url)
+    //       window.location = url;
+    //     }).catch(e =>{
+    //         console.error(e.error)
+    //     })
+    // }
   
   return (
     <>
@@ -90,7 +91,7 @@ function Cart({ id, image, name, price,rating }) {
             {cartItems.length > 0 && (
               <div className='total-count'>
                 <p><strong>Total Price</strong>: $<strong>{calculateTotalPrice()}</strong></p>
-                <button onClick={checkOut}>Proceed To Checkout</button>
+                <button onClick={() => navigate('/payment')}>Proceed To Checkout</button>
               </div>
             )}
           </div>

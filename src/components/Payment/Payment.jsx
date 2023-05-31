@@ -4,7 +4,7 @@ import './Payment.css'
 import CartContext from '../../context/CartContext'
 import { Link, useNavigate } from 'react-router-dom'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
-import Cart from '../CheckOut/Cart'
+// import Cart from '../CheckOut/Cart'
 
 const Payment = () => {
     const cartContext = useContext(CartContext)
@@ -41,7 +41,7 @@ const Payment = () => {
         setClientSecret(response.data.clientSecret) 
       }; 
       getClientSecret();     
-    }, [total])
+    }, [total,cartItems])
 
     console.log("The Secret is =>", clientSecret)
 
@@ -55,7 +55,7 @@ const Payment = () => {
         setSucceeded(true)
         setError(null)
         setProcessing(false)
-        navigate("/cart")
+        navigate("/")
       })
     };
 
@@ -69,15 +69,17 @@ const Payment = () => {
         <h1>CheckOut <Link to={'/cart'}>{cartItems?.length} items</Link></h1>
         <div className='payment-section'>
           <div className='payment-items'>
-              {cartItems.map((item) => (
-                <Cart key={item.id}
-                 item={item}
-                 id={item.id}
-                 title={item.name}
-                 image={item.image}
-                 price={item.price}
-                 rating={item.rating} />
-              ))}
+          {cartItems.map((item) => (
+              <div key={item.id} className="cart-item">
+                <img src={item.image} alt={item.name} className="cart-item-image" />
+                <div className="cart-item-details">
+                  <h3 className="cart-item-title">{item.name}</h3>
+                  <p className="cart-item-price">${item.price}</p>
+                  <p className="cart-item-rating">Rating: {item.rating}</p>
+                </div>
+              </div>
+            ))}
+
           </div>          
         </div>
         <div className='payment-section'>

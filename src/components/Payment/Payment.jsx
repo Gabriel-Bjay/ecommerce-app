@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import axios from '../../axios'
 import './Payment.css'
 import CartContext from '../../context/CartContext'
 import { Link } from 'react-router-dom'
@@ -7,8 +8,37 @@ import Cart from '../CheckOut/Cart'
 const Payment = () => {
     const cartContext = useContext(CartContext)
     const {cartItems}  = cartContext;
+    const [succeeded, setSucceeded]= useState(false);
+    const [processing, setProcessing]= useState("");
+    const [error, setError]= useState(null);
+    const [clientSecret, setClientSecret]= useState(true);
+    const [total, setTotal] = useState(0); 
 
 
+
+    useEffect(()=>{
+      const calculateTotal = () => {
+        let sum = 0;
+        cartItems.forEach((item) => {
+          sum += item.price;
+        });
+        setTotal(sum);
+      };
+  
+      // Call the function to calculate the total
+      calculateTotal();
+
+      const getClientSecret = async () => {
+        const response = await axios({
+            method: 'POST',
+            url: `/payments/create?total=${total(cartItems) * 100} `
+        });
+        setClientSecret(response.data.clientSecret) 
+      }; 
+      getClientSecret();     
+    }, [cartItems])
+
+    console.log("The Secret is =>", clientSecret)
   return (
     <div className='payment'>
       <div className='payment-container'>
@@ -80,7 +110,7 @@ export default Payment
 //     if (result.error) {
 //       console.log(result.error.message);
 //     } else {
-//       console.log('Payment succeeded:', result.paymentIntent);
+//       console.log('processing:', result.paymentIntent);
 //     }
 //   };
 

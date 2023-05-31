@@ -1,5 +1,5 @@
 import './App.css';
-// import { useState } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/layout/Header';
@@ -29,11 +29,12 @@ import SavedItems from './components/SavedItems/SavedItems';
 const promise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState('');
   return (
     
     <div className="App">
     
-          <Header/>
+          <Header searchQuery={searchQuery}/>
           <main>
             <Routes>
               <Route path='/' element={<Home/>}/>

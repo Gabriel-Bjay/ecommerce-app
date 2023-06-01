@@ -72,6 +72,7 @@
         value={{
           showCart: state.showCart,
           cartItems: state.cartItems,
+          savedItems:state.savedItems,
           setCartItems,
           setSavedItems,
           addToCart,

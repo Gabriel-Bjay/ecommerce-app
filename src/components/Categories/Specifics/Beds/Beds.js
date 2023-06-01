@@ -20,12 +20,17 @@ const Beds = ({ id, image, title, price,rating }) => {
   // Filter the products based on the category "Beds"
   const bedsData = productsData.filter((product) => product.category === 'Beds');
   const cartContext = useContext(CartContext)
-  const {addToCart} = cartContext;
+  const {addToCart, setSavedItems} = cartContext;
 
   const addToBasketHandler = (bed) => {
     const { id, image, name, price, rating } = bed;
     addToCart({ id, image, name, price,rating });
   };
+
+  const addToSavedHandler = (bed) =>{
+    const { id, image, name, price, rating } = bed;
+    setSavedItems({ id, image, name, price, rating });
+  }
   
     
   return (
@@ -46,7 +51,7 @@ const Beds = ({ id, image, title, price,rating }) => {
               <p>{bed.rating}</p>
             </div>
             <button onClick={() => addToBasketHandler(bed)}>Add To Basket</button>
-            <button>Save</button>
+            <button onClick={() =>addToSavedHandler(bed)}>Save</button>
           </div>
         ))}
       </div>

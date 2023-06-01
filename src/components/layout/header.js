@@ -16,7 +16,7 @@
   const Header = ( { searchQuery }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user] = useAuthState(auth);
-    const {  cartItems } = useContext(CartContext);
+    const {  savedItems,cartItems } = useContext(CartContext);
 
     const handleLogout = () => {
       signOut(auth)
@@ -201,10 +201,14 @@
                           </Link>
                         )}
                       </div>
-                      <div className='saved'>
-                        <p>Saved</p>
-                        <Save/>
-                      </div>
+                      <Link to='/saved'>
+                        <div className='saved'>
+                          <p>Saved</p>
+                          {savedItems?.length}
+                          <Save/>
+                        </div>
+                      </Link>
+                      
                     </div>
                   </div>
                 </div>

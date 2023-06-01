@@ -1,4 +1,3 @@
-  // import SearchIcon from '@mui/icons-material/Search'; 
   import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
   import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
   import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -13,27 +12,11 @@
   import { useAuthState } from 'react-firebase-hooks/auth';
   import { useContext} from "react";
   import CartContext from '../../context/CartContext';
-  import { useNavigate } from 'react-router-dom';
-  import data from '../../products.json'
-
+  
   const Header = ( { searchQuery }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user] = useAuthState(auth);
     const {  cartItems } = useContext(CartContext);
-    const [searchTerm, setSearchTerm] = useState(''); 
-    const navigate = useNavigate();
-  
-    
-    const handleSearch = () => {
-      console.log('Search term:', searchTerm);
-      const filteredItems = data.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      console.log('Filtered items:', filteredItems);
-      navigate(`/search/${searchTerm}`);
-    };
-
-   
 
     const handleLogout = () => {
       signOut(auth)
@@ -180,15 +163,9 @@
             className="header_input"
             type="text"
             placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-              console.log('Search term:', e.target.value);
-            }}
           />
-
-            <button onClick={() => handleSearch()}>Search</button>
           </div>
+          
         </div>
 
 

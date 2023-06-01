@@ -24,7 +24,6 @@ import Payment from './components/Payment/Payment';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import SavedItems from './components/SavedItems/SavedItems';
-import SearchResults from './components/SearchResults/SearchResults';
 
 const promise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
 
@@ -51,11 +50,11 @@ function App() {
               <Route path='chairs' element={<Chairs/>}/>
               <Route path='sofas' element={<Sofas/>}/>
               <Route path='tables' element={<Tables/>}/>
-              <Route path="/search/:category" element={<SearchResults/>} />
               <Route path='japanese-collection' element={<Japanese/>}/>
               <Route path='modern-collection' element={<Modern/>}/>
               <Route path='valebeck-collection' element={<Valebeck/>}/>
               <Route path='cart' element={<Cart/>}/>
+              <Route path='saved' element={<SavedItems/>}/>
               <Route
                 path="/payment"
                 element={

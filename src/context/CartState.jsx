@@ -8,6 +8,7 @@
     const initialState = {
       cartItems: [],
       checkout: false,
+      savedItems: [],
     };
 
     //Set up the reducer
@@ -16,6 +17,10 @@
     // Set Up CartItems
     const setCartItems = (cartItems) =>{
       dispatch({type:"SET_CART_ITEMS", payload: cartItems});
+    }
+
+    const setSavedItems = (savedItems) =>{
+      dispatch({type: "SAVE_ITEMS", payload: savedItems,});
     }
 
     useEffect(() => {
@@ -68,6 +73,7 @@
           showCart: state.showCart,
           cartItems: state.cartItems,
           setCartItems,
+          setSavedItems,
           addToCart,
           removeFromCart,
           increase,

@@ -7,12 +7,13 @@
   import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
   import { Link } from 'react-router-dom';
   import "./Header.css"
-  import { useState, useEffect } from 'react';
+  import { useState } from 'react';
   import { auth } from "../../firebase";
   import { signOut } from "firebase/auth";
   import { useAuthState } from 'react-firebase-hooks/auth';
   import { useContext} from "react";
   import CartContext from '../../context/CartContext';
+  import { useNavigate } from 'react-router-dom';
   import data from '../../products.json'
 
   const Header = ( { searchQuery }) => {
@@ -20,17 +21,19 @@
     const [user] = useAuthState(auth);
     const {  cartItems } = useContext(CartContext);
     const [searchTerm, setSearchTerm] = useState(''); 
-    const [filteredItems, setFilteredItems] = useState([]);
+    const navigate = useNavigate();
   
-    useEffect(() => {
-      // Filter the items based on the search query
-      const filtered = data.filter((item) =>
-        item.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setFilteredItems(filtered);
-    }, [searchQuery]);
-
     
+    const handleSearch = () => {
+      console.log('Search term:', searchTerm);
+      const filteredItems = data.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      console.log('Filtered items:', filteredItems);
+      navigate(`/search/${searchTerm}`);
+    };
+
+   
 
     const handleLogout = () => {
       signOut(auth)
@@ -173,23 +176,19 @@
 
                 <div className="search_container">
           <div className="header_search">
-            <input
-              className="header_input"
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+          <input
+            className="header_input"
+            type="text"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              console.log('Search term:', e.target.value);
+            }}
+          />
+
+            <button onClick={() => handleSearch()}>Search</button>
           </div>
-          {filteredItems.length > 0 && (
-            <div className="search-results">
-              {filteredItems.map((item) => (
-                <Link key={item.id} to={`/item/${item.id}`}>
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          )}
         </div>
 
 

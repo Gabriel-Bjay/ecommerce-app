@@ -19,12 +19,17 @@ const Chairs =({ id, image, title, price,rating })=> {
   // Filter the products based on the category "chairs"
   const chairsData = productsData.filter((product) => product.category === 'Chairs');
   const cartContext = useContext(CartContext)
-  const {addToCart} = cartContext;
+  const {addToCart, setSavedItems} = cartContext;
 
   const addToBasketHandler =(chair)=>{
     const {id,image,name,price,rating} = chair
     addToCart({id, image, name, price,rating });
 };
+
+  const addToSavedHandler = (chair) =>{
+    const { id, image, name, price, rating } = chair;
+    setSavedItems({ id, image, name, price, rating });
+  }
   return (
     <>
       <h2>Chairs</h2>
@@ -41,7 +46,8 @@ const Chairs =({ id, image, title, price,rating })=> {
               <p>{chair.rating}</p>
             </div>
               <button onClick={()=>addToBasketHandler(chair)}>Add To Basket</button>
-              <button>Save</button>
+              <button onClick={() =>addToSavedHandler(chair)}>Save</button>
+              
           </div>
         ))}
       </div>

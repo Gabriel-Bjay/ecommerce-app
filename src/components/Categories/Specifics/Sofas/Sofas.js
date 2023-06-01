@@ -17,7 +17,7 @@ function Sofas({ id,image,name,price,rating}) {
   // Filter the products based on the category "Sofas"
   const sofasData = productsData.filter((product) => product.category === 'Sofas');
   const cartContext = useContext(CartContext)
-  const {addToCart} = cartContext;
+  const {addToCart, setSavedItems} = cartContext;
 
   // Adding the saving feature
 
@@ -25,9 +25,12 @@ function Sofas({ id,image,name,price,rating}) {
 
   const addToBasketHandler =(sofa)=>{
     const {id,image,name,price,rating} = sofa
-    addToCart({id,image,name,price,rating});
-    
-};
+    addToCart({id,image,name,price,rating});  
+  };
+  const addToSavedHandler =(sofa)=>{
+    const {id,image,name,price,rating} = sofa
+    setSavedItems({id,image,name,price,rating});
+    };
 
   return (
 
@@ -43,7 +46,8 @@ function Sofas({ id,image,name,price,rating}) {
               <p>{sofa.rating}</p>
             </div>
               <button onClick={()=>addToBasketHandler(sofa)}>Add To Basket</button>
-              <button>Save</button>
+              <button onClick={() =>addToSavedHandler(sofa)}>Save</button>
+
           </div>
         ))}
       </div>

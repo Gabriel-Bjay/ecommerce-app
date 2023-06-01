@@ -17,13 +17,18 @@ function Tables({ id, image, title, price,rating }) {
   // Filter the products based on the category "Tables"
   const tablesData = productsData.filter((product) => product.category === 'Tables');
   const cartContext = useContext(CartContext)
-  const {addToCart} = cartContext;
+  const {addToCart, setSavedItems} = cartContext;
 
   const addToBasketHandler =(table)=>{
     const {id,image,name,price,rating} = table
     addToCart({id,image,name,price,rating });
     
 };
+  const addToSavedHandler = (table) =>{
+    const { id, image, name, price, rating } = table;
+    setSavedItems({ id, image, name, price, rating });
+  }
+
   return (
     <>
       <h2>Tables</h2>
@@ -37,7 +42,7 @@ function Tables({ id, image, title, price,rating }) {
               <p>{table.rating}</p>
             </div>
               <button onClick={()=>addToBasketHandler(table)}>Add To Basket</button>
-              <button>Save</button>
+              <button onClick={() =>addToSavedHandler(table)}>Save</button> 
           </div>
         ))}
       </div>

@@ -19,8 +19,8 @@
       dispatch({type:"SET_CART_ITEMS", payload: cartItems});
     }
 
-    const setSavedItems = (savedItems) =>{
-      dispatch({type: "SAVE_ITEMS", payload: savedItems,});
+    const setSavedItems = (product) =>{
+      dispatch({type: "SAVE", payload: product,});
     }
 
     useEffect(() => {

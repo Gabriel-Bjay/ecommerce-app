@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate  } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/layout/Header';
 import Footer from './components/Footer/Footer';
@@ -24,15 +24,47 @@ import Payment from './components/Payment/Payment';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import SavedItems from './components/SavedItems/SavedItems';
+import SearchItems from './components/layout/SearchItems';
+import data from './products.json'  
+import { useState } from 'react';
+
+
 
 const promise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
+  const navigate = useNavigate()
+
+  const handleSearch = (event) => {
+    const searchTerm = event.target.value; // Retrieve the search term from the event object
+    // Filter the data based on the search term
+    const filteredData = data.filter((val) => {
+      if (searchTerm === '') {
+        return val;
+      } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+        return val;
+      }
+    });
+    navigate('/search-item', { state: { filteredData } });
+    console.log(filteredData)
+    setFilteredData(filteredData);
+    setSearchTerm(searchTerm);
+
+    if (searchTerm === '') {
+      navigate('/');
+    }
+
+  };
+  
+  
+    
   return (
     
     <div className="App">
     
-          <Header/>
+          <Header setSearchTerm={setSearchTerm} handleSearch={handleSearch}/>
           <main>
             <Routes>
               <Route path='/' element={<Home/>}/>
@@ -55,6 +87,10 @@ function App() {
               <Route path='valebeck-collection' element={<Valebeck/>}/>
               <Route path='cart' element={<Cart/>}/>
               <Route path='saved' element={<SavedItems/>}/>
+             
+              <Route
+                  path="search-item"
+                  element={<SearchItems searchData={filteredData} />}/>
               <Route
                 path="/payment"
                 element={

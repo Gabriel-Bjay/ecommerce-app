@@ -2,21 +2,21 @@ import React from 'react'
 import ChairOutlinedIcon from '@mui/icons-material/ChairOutlined';
 import ChairAltOutlinedIcon from '@mui/icons-material/ChairAltOutlined';
 import TableRestaurantOutlinedIcon from '@mui/icons-material/TableRestaurantOutlined';
-// import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
-import TableBarOutlinedIcon from '@mui/icons-material/TableBarOutlined';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import OutlinedFlagIcon from '@mui/icons-material/OutlinedFlag';
 import ViewInArOutlinedIcon from '@mui/icons-material/ViewInArOutlined';
 import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
+import BedIcon from '@mui/icons-material/Bed';
 import "./Categories.css"
 import { Link } from 'react-router-dom';
 
 const Categories = () => {
   return (
     <div className='categories-container'>
-      <h2 className='head'>Shop By Categories</h2>
-      <p className='sub-head'>Start exploring by choosing any furniture categories</p>
-
+        <div className='category-head'>
+            <h2 className='head'>Shop By Categories</h2>
+            <p className='sub-head'>Start exploring by choosing any furniture categories</p>
+        </div>
       <div className='categories-list'>
         <Link to='/sofas'>
             <div className='category'>
@@ -36,17 +36,12 @@ const Categories = () => {
                 <p>Tables</p>
             </div>
         </Link>
-        {/* <Link to='/kitchen'>
-            <div className='category'>
-                <KitchenOutlinedIcon className='icon' />
-                <p>Storages</p>
-            </div>
-        </Link> */}
+        
 
-        <Link to='/tables'>
+        <Link to='/beds'>
             <div className='category'>
-                <TableBarOutlinedIcon className='icon' />
-                <p>Side Tables</p>
+                <BedIcon className='icon' />
+                <p>Beds</p>
             </div>
         </Link>
       </div>

@@ -2,7 +2,7 @@
   import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
   import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
   import LoginIcon from '@mui/icons-material/Login';
-  import {  BedOutlined, DiningOutlined, ExpandMore, KitchenOutlined, LivingOutlined, LogoutOutlined, MapsHomeWorkOutlined, Save, Settings } from '@mui/icons-material';
+  import {  BedOutlined, DiningOutlined, ExpandMore, KitchenOutlined, LivingOutlined,  MapsHomeWorkOutlined, Save, Settings } from '@mui/icons-material';
   import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
   import { Link } from 'react-router-dom';
   import "./Header.css"
@@ -13,7 +13,7 @@
   import { useContext} from "react";
   import CartContext from '../../context/CartContext';
   
-  const Header = ( { searchQuery }) => {
+  const Header = ({setSearchTerm, handleSearch}) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user] = useAuthState(auth);
     const {  savedItems,cartItems } = useContext(CartContext);
@@ -159,13 +159,33 @@
 
                 <div className="search_container">
           <div className="header_search">
-          <input
-            className="header_input"
-            type="text"
-            placeholder="Search"
-          />
+            <input
+              className="header_input"
+              type="text"
+              placeholder="Search..."
+              onChange={handleSearch}
+            />
           </div>
-          
+          {/* <Link to={'/search-item'}>
+            <div className='search-results'>
+              {data.filter((val) => {
+                if(searchTerm === ''){
+                  return val
+                }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val
+                }
+              }).map((val, key) =>{
+                return(
+                  <div className="search_result">
+                    <img src={val.image} alt={val.name}/>
+                    <p>{val.name}</p>
+                    <p>{val.price}</p>
+                    <p>{val.rating}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </Link> */}
         </div>
 
 

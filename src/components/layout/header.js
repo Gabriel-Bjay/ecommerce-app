@@ -93,8 +93,6 @@
                       <AddToPhotosIcon className='icon'/>
                       <h6>Ideas</h6>
                     </Link>
-                      <div className='component-drop-down'>
-                      </div>
                     </div>
 
                     <div className='component'>

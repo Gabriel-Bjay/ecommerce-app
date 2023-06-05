@@ -6,7 +6,6 @@ const SearchItems = ({searchData}) => {
     <>
       <h1 className='search-header'>Items Page</h1>
       <div className='search-items'>
-        
           {searchData.map((val, key) => {
             return (
               <div key={key} className='item'>
@@ -17,7 +16,6 @@ const SearchItems = ({searchData}) => {
               </div>
             );
           })}
-        
       </div>
     </>
   )

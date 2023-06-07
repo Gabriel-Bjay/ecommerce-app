@@ -164,29 +164,7 @@
               onChange={handleSearch}
             />
           </div>
-          {/* <Link to={'/search-item'}>
-            <div className='search-results'>
-              {data.filter((val) => {
-                if(searchTerm === ''){
-                  return val
-                }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase())){
-                  return val
-                }
-              }).map((val, key) =>{
-                return(
-                  <div className="search_result">
-                    <img src={val.image} alt={val.name}/>
-                    <p>{val.name}</p>
-                    <p>{val.price}</p>
-                    <p>{val.rating}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </Link> */}
         </div>
-
-
                 <Link to='/cart'>
                   <div className='shopping-basket'>
                     <ShoppingBasketIcon className='shopping-basket-icon'/> 

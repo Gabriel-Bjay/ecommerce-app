@@ -86,6 +86,7 @@ const Payment = () => {
             <h3>Payment Method</h3>
           </div>
           <div className='payment-details'>
+            {/* Stripe Code Will Go Here */}
             <form onSubmit={handleSubmit}>
               <CardElement onChange={handleChange}/>
               <div className='payment-price-container'>

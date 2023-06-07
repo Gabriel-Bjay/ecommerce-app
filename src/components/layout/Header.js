@@ -196,6 +196,7 @@
                           </div>  
                           </Link>
                         )}
+                        
                       </div>
                       <Link to='/saved'>
                         <div className='saved'>

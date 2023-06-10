@@ -23,16 +23,20 @@ const Home = () => {
               <h1 className='home-subhead'>Make Your <u>dream space</u> a reality</h1>
 
               <div className='redirect-btns'>
+              <Link to='/ideas'>
                   <div className='redirect'>
                     <AddToPhotosIcon className='icon'/>
                     <h6>Ideas</h6>
                     <ArrowForwardIcon className='icon'/>
                   </div>
+              </Link>
+              <Link to='/categories'>
                   <div className='redirect'>
                       <StorefrontIcon className='icon'/>
                       <h6>Shop Now</h6>
                       <ArrowForwardIcon className='icon'/>
                   </div>
+              </Link>   
               </div>
             </div> 
           </div>

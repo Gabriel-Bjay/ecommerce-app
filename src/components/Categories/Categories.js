@@ -52,7 +52,7 @@ const Categories = () => {
             <div className='room1-description'>
                 <h5 className='room1-text'>Curate the best <br/>dining area</h5>
                 <p>From dining tables,chairs,<br/>sideboards and more</p>
-                <Link to='/diningroom'>
+                <Link to='/chairs'>
                     <button className='room1-btn'>Dining Room</button>
                 </Link>
             </div>
@@ -69,7 +69,7 @@ const Categories = () => {
         <div className='room1-description'>
             <h5 className='room1-text'>Style your cozy <br/>living room</h5>
             <p>From sofas,coffee tables,side<br/> tables cabinets and more</p>
-            <Link to='/livingroom'>
+            <Link to='/sofas'>
                 <button className='room1-btn'>Living Room</button>
             </Link>
         </div>
@@ -87,7 +87,7 @@ const Categories = () => {
         <div className='room1-description'>
             <h5 className='room1-text'>Make your bedroom <br/>comfortable</h5>
             <p>From bedframes, mattresses,<br/> bedside tables, and more</p>
-            <Link to='/bedroom'>
+            <Link to='/beds'>
                 <button className='room1-btn'>Bedroom</button>
             </Link>
         </div>

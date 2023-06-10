@@ -1,49 +1,50 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
+import products from '../../../../products.json'
+import './Diningroom.css'
+import CartContext from '../../../../context/CartContext'
 
 const Diningroom = () => {
+    const diningData = products.filter((product) => product.category === 'Tables' && 'Chairs');
+    const cartContext = useContext(CartContext)
+    const {addToCart, setSavedItems} = cartContext;
+
+    const addToBasketHandler =(table)=>{
+        const {id,image,name,price,rating} = table
+        addToCart({id,image,name,price,rating });
+        
+    };
+      const addToSavedHandler = (table) =>{
+        const { id, image, name, price, rating } = table;
+        setSavedItems({ id, image, name, price, rating });
+      }
+
+      const [selectedTable, setSelectedTable] = useState(null);
+
+        const selectitem = (tableId) => {
+            setSelectedTable(tableId);
+        };
+
+        const closeModal = () => {
+            setSelectedTable(null);
+        };
     return (
         <div className='dining-room-container'>
-            <img src='https://www.innovationsofabeds.com.au/wp-content/uploads/2015/02/SPLITBACK-FREJ-SOFA-EIK-CHAIR-521-MIXED-DANCE-GREY-1.jpg'
-             alt='' className=''/>
-             <div>
-                <h1>Dining Room</h1>
-             </div> 
-             <div className='dining-images'>
-                <h4>Dining Room</h4>
-                <p>Create a stylish and comfortable dining space with our wide selection of dining room furniture. From sectional sofas to timeless end tables and coffee tables, you’ll find everything you need to make your dining room space both enjoyable and inviting.</p>
-                <div className='image'>
-                    <img src=''
-                    alt=''
-                    className='dining-image'/>
-                    <div className='description'>
-                        <h1>Hiace Sofa 1 seater</h1>
+             <div className='dining-header'> <h1>Dining Room</h1> </div> 
+             <p>Create a stylish and comfortable dining space with our wide selection of dining room furniture. From sectional sofas to timeless end tables and coffee tables, you’ll find everything you need to make your dining room space both enjoyable and inviting.</p>  
+
+             <div className='dining-container'>
+             {diningData.map((item) => (
+                <div key={item.id} className='item'>
+                    <img src={item.image} alt={item.name} className='item-image' onClick={()=>selectitem(item.id)} />
+                    <h3 className='item-name'>{item.name}</h3>
+                    <p className='price-tag'>Price: ${item.price}</p>
+                    <div className='rating'>
+                    <p>{item.rating}</p>
                     </div>
+                    <button onClick={()=>addToBasketHandler(item)}>Add To Basket</button>
+                    <button onClick={() =>addToSavedHandler(item)}>Save</button> 
                 </div>
-                <div className='image'>
-                <img src='https://neolivin.com/wp-content/uploads/2022/06/1-2-2-680x680-optimized.png'
-                    alt=''
-                    className='dining-image'/>
-                </div>
-                <div className='image'>
-                <img src='https://neolivin.com/wp-content/uploads/2022/06/Product-Image-for-Website-JPG-7-680x680-optimized.png'
-                    alt=''
-                    className='dining-image'/>
-                </div>
-                <div className='image'>
-                <img src='https://neolivin.com/wp-content/uploads/2022/06/38-2-2-680x680-optimized.png'
-                    alt=''
-                    className='dining-image'/>
-                </div>
-                <div className='image'>
-                <img src='https://neolivin.com/wp-content/uploads/2022/06/44-1-3-e1660561056595-680x680-optimized.png'
-                    alt=''
-                    className='dining-image'/>
-                </div>
-                <div className='image'>
-                <img src='https://neolivin.com/wp-content/uploads/2022/06/29-1-680x680-optimized.png'
-                    alt=''
-                    className='dining-image'/>
-                </div>
+                ))}
              </div>
         </div>
       )

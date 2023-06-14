@@ -93,9 +93,10 @@
 
 .departments{
     padding: 10px;
-    margin-top: 15rem;
-    position: relative;
+    margin-top: 10px;
+    position: absolute;
     display: inline-block;
+    background-color: #f1f1f1;
 }
 
 

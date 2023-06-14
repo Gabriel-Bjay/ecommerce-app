@@ -91,31 +91,29 @@
                     <div className='component'>
                     <Link to="ideas">
                       <AddToPhotosIcon className='icon'/>
-                      <h6>Ideas</h6>
+                      <h4>Ideas</h4>
                     </Link>
                     </div>
 
                     <div className='component'>
-                      <h6>Shop</h6>
+                      <h4>Shop</h4>
                       <KeyboardArrowDownIcon className='drop-down'/>
                       <div className='drop-down-list-2'>
                         <div className='departments'>
                           <div className='rooms'>
                             <h4>Rooms</h4>
-                            <Link to="/livingroom">
+                            <Link to="/sofas">
                               <p>Living Room</p>
                             </Link>
 
-                            <Link to="/kitchen">
+                            <Link to="/chairs">
                               <p>Kitchen</p>
                             </Link>
 
-                            <Link to="/bedroom">
+                            <Link to="/beds">
                               <p>Bedroom</p>
                             </Link> 
-                            <Link to="/office">
-                              <p>Office</p>
-                            </Link>                                                  
+                                                                             
                           </div>
                           <div className='categories'>
                             <h4>Categories</h4>
@@ -132,7 +130,7 @@
                               <p>Tables</p>
                             </Link>
                           </div>
-                          <div className='collections'>
+                          {/* <div className='collections'>
                             <h4>Collections</h4>
                             <Link to='/japanese-collection'>
                               <p>Japanese,Minimalsim</p>
@@ -143,14 +141,14 @@
                             <Link to='/valebeck-collection'>
                               <p>Valebeck, Modern</p>
                             </Link>  
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
 
                     <div className='component'>
                     <Link to="/collections">
-                      <h6>Collections</h6>
+                      <h4>Collections</h4>
                     </Link>
                     </div>
                 </div>

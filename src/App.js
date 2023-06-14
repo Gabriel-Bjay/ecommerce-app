@@ -67,7 +67,7 @@ function App() {
           <Header setSearchTerm={setSearchTerm} handleSearch={handleSearch}/>
           <main>
             <Routes>
-              <Route path='/' element={<Home/>}/>
+              <Route path='' element={<Home/>}/>
               <Route path='login' element={<Login/>}/>
               <Route path='categories' element={<Categories/>}/>
               <Route path='ideas' element={<Ideas/>}/>

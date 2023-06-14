@@ -1,6 +1,5 @@
 import React from 'react'
 import "./NewArrivals.css"
-import { ShoppingBasket } from '@mui/icons-material'
 
 const NewArrivals = () => {
   return (
@@ -16,7 +15,7 @@ const NewArrivals = () => {
             <div className='arrival-overlay'>
               <p>Price: $ 500</p>
               <h4>Wood End Table</h4>
-              <ShoppingBasket className='add-to-cart'/>
+             
             </div>
         </div>
         <div className='new-arrival'>
@@ -28,7 +27,7 @@ const NewArrivals = () => {
                <div className='arrival-overlay'>
                 <p>Price:$ 942</p>
                 <h4>Hanks 6'' Steel Bed Frame</h4>
-                <ShoppingBasket className='add-to-cart'/>
+               
                </div> 
         </div>
         <div className='new-arrival'>
@@ -40,7 +39,7 @@ const NewArrivals = () => {
                 <div className='arrival-overlay'>
                   <p>Price:$ 750</p>
                   <h4>Round Marble Dining Table</h4>
-                  <ShoppingBasket className='add-to-cart'/>
+                 
                 </div>
         </div>
         <div className='new-arrival'>
@@ -52,7 +51,7 @@ const NewArrivals = () => {
                 <div className='arrival-overlay'>
                   <p>Price:$ 480</p>
                   <h4> Wooden Small Size Dining Table</h4>
-                  <ShoppingBasket className='add-to-cart'/>
+                 
                 </div>
         </div>
         <div className='new-arrival'>
@@ -64,7 +63,7 @@ const NewArrivals = () => {
                 <div className='arrival-overlay'>
                   <p>Price:$ 500</p>
                   <h4>Wooden Dining Table</h4>
-                  <ShoppingBasket className='add-to-cart'/>
+                 
                 </div>
         </div>
       </div>

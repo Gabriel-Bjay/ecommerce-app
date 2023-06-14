@@ -8,15 +8,20 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 const Payment = () => {
     const cartContext = useContext(CartContext)
     const {cartItems}  = cartContext;
+
+    const navigate =useNavigate();
+
+    const stripe = useStripe();
+    const elements = useElements();
+
+
     const [succeeded, setSucceeded]= useState(false);
     const [disabled, setDisabled]= useState(true);
     const [processing, setProcessing]= useState("");
     const [error, setError]= useState(null);
-    const [clientSecret, setClientSecret]= useState("");
+    const [clientSecret, setClientSecret]= useState(true);
     const [total, setTotal] = useState(0); 
-    const stripe = useStripe();
-    const elements = useElements();
-    const navigate =useNavigate();
+   
 
 
 

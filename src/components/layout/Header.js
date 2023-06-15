@@ -1,34 +1,24 @@
   import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
   import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
   import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-  import LoginIcon from '@mui/icons-material/Login';
-  import {  BedOutlined, DiningOutlined, ExpandMore, KitchenOutlined, LivingOutlined,  MapsHomeWorkOutlined, Save, Settings } from '@mui/icons-material';
+  import {  BedOutlined, DiningOutlined, ExpandMore, KitchenOutlined, LivingOutlined,  LoginOutlined,  MapsHomeWorkOutlined, Save, Settings } from '@mui/icons-material';
   import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
   import { Link } from 'react-router-dom';
   import "./Header.css"
-  import { useState } from 'react';
-  import { auth } from "../../firebase";
-  import { signOut } from "firebase/auth";
-  import { useAuthState } from 'react-firebase-hooks/auth';
+  import { auth } from '../../firebase';
   import { useContext} from "react";
   import CartContext from '../../context/CartContext';
   
   const Header = ({setSearchTerm, handleSearch}) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [user] = useAuthState(auth);
-    const {  savedItems,cartItems } = useContext(CartContext);
+    const {  savedItems,cartItems, user } = useContext(CartContext);
 
-    const handleLogout = () => {
-      signOut(auth)
-        .then(() => {
-          // Logout successful
-          setIsLoggedIn(false); // Update the isLoggedIn state
-        })
-        .catch((error) => {
-          // Handle any errors that occur during logout
-          console.log("Logout error:", error);
-        });
+    const handleAuthentication = () => {
+      if (user) {
+        auth.signOut();
+      }
     };
+
+    
     return (
       <>
         <div className='alert'>
@@ -130,18 +120,6 @@
                               <p>Tables</p>
                             </Link>
                           </div>
-                          {/* <div className='collections'>
-                            <h4>Collections</h4>
-                            <Link to='/japanese-collection'>
-                              <p>Japanese,Minimalsim</p>
-                            </Link>
-                            <Link to='/modern-collection'>
-                              <p>Modern,Industrial</p>
-                            </Link>
-                            <Link to='/valebeck-collection'>
-                              <p>Valebeck, Modern</p>
-                            </Link>  
-                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -180,21 +158,20 @@
                         <Settings/>
                       </div>
                       <div className='logout'>
-        
-                        {user ? (
-                          <div className='login-logout'>
-                            <p>Log Out</p>
-                            <LoginIcon onClick={handleLogout}/>                       
-                          </div>
-                        ) : (
-                          <Link to='/login'>
-                          <div className='login-logout'>
-                            <p>Login</p>
-                            <LoginIcon/>
-                          </div>  
-                          </Link>
-                        )}
-                        
+                        {!user ? (
+                            <Link to='/login'>
+                              <div>
+                                <p>Login</p>
+                                <LoginOutlined/>
+                              </div>  
+                            </Link>
+                            
+                          ) : (
+                            <div>
+                              <p>Log Out</p>
+                              <LoginOutlined onClick={handleAuthentication}/>                       
+                            </div>
+                          )}                        
                       </div>
                       <Link to='/saved'>
                         <div className='saved'>

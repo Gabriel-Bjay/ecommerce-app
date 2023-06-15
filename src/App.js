@@ -26,9 +26,9 @@ import { Elements } from '@stripe/react-stripe-js';
 import SavedItems from './components/SavedItems/SavedItems';
 import SearchItems from './components/layout/SearchItems';
 import data from './products.json'  
-import { useState } from 'react';
-
-
+import { useState, useContext, useEffect } from 'react';
+import CartContext from './context/CartContext';
+import { auth } from './firebase';
 
 const promise = loadStripe('pk_test_51N1As3DRIsEHj72wieVYAegm39q9x0vV55rklaY9Yf9cV0zyKx7aXGZdeEu1iFs8V4Yxg06uojL8xQ4dASCnuSdb00GhlNGjJN');
 
@@ -57,7 +57,21 @@ function App() {
     }
 
   };
-  
+
+  const cartContext = useContext(CartContext)
+  const {setUser} = cartContext
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log("User is -> ", authUser);
+
+      if (authUser) {
+        setUser(authUser);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
   
     
   return (

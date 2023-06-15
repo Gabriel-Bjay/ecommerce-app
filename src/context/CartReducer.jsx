@@ -6,6 +6,7 @@ import {
   CHECKOUT,
   CLEAR,
   SAVE,
+  SET_USER,
 } from "./CartTypes.js";
 
 export const sumItems = (cartItems) => {
@@ -44,7 +45,13 @@ const CartReducer = (state, action) => {
         return {
           ...state,
           savedItems: [...state.savedItems, savedItem],
-        }
+        };
+    
+    case SET_USER:
+        return{
+          ...state,
+          user: action.payload,
+        };    
         
     case REMOVE_ITEM:
       const updatedCartItems = state.cartItems.filter(item => item.id !== action.payload.id);

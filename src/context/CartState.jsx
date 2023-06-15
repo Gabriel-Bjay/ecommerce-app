@@ -1,4 +1,4 @@
-  import { useReducer,useEffect } from "react";
+  import { useReducer } from "react";
   import CartContext from "./CartContext";
   import CartReducer from "./CartReducer";
   // import { sumItems } from "./CartReducer";
@@ -8,6 +8,7 @@
     const initialState = {
       cartItems: [],
       checkout: false,
+      user:"",
       savedItems: [],
     };
 
@@ -23,17 +24,7 @@
       dispatch({type: "SAVE", payload: product,});
     }
 
-    useEffect(() => {
-      const storedCartItems = localStorage.getItem("cartItems");
-      if (storedCartItems) {
-        const parsedCartItems = JSON.parse(storedCartItems);
-        dispatch({ type: "SET_CART_ITEMS", payload: parsedCartItems });
-      }
-    }, []);
-  
-    useEffect(() => {
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-    }, [state.cartItems]);
+    
     //Function to handle when an item is added from the store into the Cart
     const addToCart = (product) => {
       dispatch({ type: "ADD_TO_CART", payload: product });
@@ -59,6 +50,14 @@
       dispatch({ type: "CLEAR" });
     };
 
+    const setUser = (user) => {
+      console.log("User payload", user);
+      dispatch({
+        type: "SET_USER",
+        payload: user,
+      });
+    };
+
     //Function to handle when the user clicks the checkout button
     const handleCheckout = () => {
       dispatch({ type: "CHECKOUT" });
@@ -73,6 +72,7 @@
           showCart: state.showCart,
           cartItems: state.cartItems,
           savedItems:state.savedItems,
+          user: state.user,
           setCartItems,
           setSavedItems,
           addToCart,
@@ -81,6 +81,7 @@
           decrease,
           handleCheckout,
           clearCart,
+          setUser,
         }}
       >
         {children}

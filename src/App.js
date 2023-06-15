@@ -59,19 +59,24 @@ function App() {
   };
 
   const cartContext = useContext(CartContext)
-  const {setUser} = cartContext
+  const {setUser,dispatch} = cartContext
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log("User is -> ", authUser);
-
+  
       if (authUser) {
         setUser(authUser);
+        // Set isAuthenticated to true
+        dispatch({ type: "SET_AUTHENTICATION", payload: true });
       } else {
         setUser(null);
+        // Set isAuthenticated to false
+        dispatch({ type: "SET_AUTHENTICATION", payload: false });
       }
     });
   }, []);
+  
   
     
   return (

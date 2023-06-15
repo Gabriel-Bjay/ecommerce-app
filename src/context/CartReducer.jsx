@@ -7,6 +7,7 @@ import {
   CLEAR,
   SAVE,
   SET_USER,
+  SET_AUTHENTICATION,
 } from "./CartTypes.js";
 
 export const sumItems = (cartItems) => {
@@ -51,7 +52,14 @@ const CartReducer = (state, action) => {
         return{
           ...state,
           user: action.payload,
-        };    
+        };
+    
+    case SET_AUTHENTICATION:
+        return {
+          ...state,
+          isAuthenticated: action.payload,
+        };
+        
         
     case REMOVE_ITEM:
       const updatedCartItems = state.cartItems.filter(item => item.id !== action.payload.id);

@@ -20,16 +20,26 @@ const Beds = ({ id, image, title, price,rating }) => {
   // Filter the products based on the category "Beds"
   const bedsData = productsData.filter((product) => product.category === 'Beds');
   const cartContext = useContext(CartContext)
-  const {addToCart, setSavedItems} = cartContext;
+  const {addToCart, setSavedItems, isAuthenticated} = cartContext;
 
   const addToBasketHandler = (bed) => {
     const { id, image, name, price, rating } = bed;
-    addToCart({ id, image, name, price,rating });
+    if (isAuthenticated) {
+      addToCart({ id, image, name, price, rating });
+    } else {
+      // Handle the case when the user is not authenticated
+      alert('Please log in to add items to the basket.');
+    }
   };
 
   const addToSavedHandler = (bed) =>{
     const { id, image, name, price, rating } = bed;
-    setSavedItems({ id, image, name, price, rating });
+    if (isAuthenticated) {
+      setSavedItems({ id, image, name, price, rating });
+    } else {
+      // Handle the case when the user is not authenticated
+      alert('Please log in to save this item.');
+    }
   }
   
     

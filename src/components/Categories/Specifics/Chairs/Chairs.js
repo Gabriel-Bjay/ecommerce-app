@@ -19,16 +19,26 @@ const Chairs =({ id, image, title, price,rating })=> {
   // Filter the products based on the category "chairs"
   const chairsData = productsData.filter((product) => product.category === 'Chairs');
   const cartContext = useContext(CartContext)
-  const {addToCart, setSavedItems} = cartContext;
+  const {addToCart, setSavedItems,isAuthenticated} = cartContext;
 
-  const addToBasketHandler =(chair)=>{
-    const {id,image,name,price,rating} = chair
-    addToCart({id, image, name, price,rating });
-};
+  const addToBasketHandler = (chair) => {
+    const { id, image, name, price, rating } = chair;
+    if (isAuthenticated) {
+      addToCart({ id, image, name, price, rating });
+    } else {
+      // Handle the case when the user is not authenticated
+      alert('Please log in to add items to the basket.');
+    }
+  };
 
   const addToSavedHandler = (chair) =>{
     const { id, image, name, price, rating } = chair;
-    setSavedItems({ id, image, name, price, rating });
+    if (isAuthenticated) {
+      setSavedItems({ id, image, name, price, rating });
+    } else {
+      // Handle the case when the user is not authenticated
+      alert('Please log in to save this item.');
+    }
   }
   return (
     <>

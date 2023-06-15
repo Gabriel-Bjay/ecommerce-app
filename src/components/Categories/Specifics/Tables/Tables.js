@@ -17,16 +17,26 @@ function Tables({ id, image, title, price,rating }) {
   // Filter the products based on the category "Tables"
   const tablesData = productsData.filter((product) => product.category === 'Tables');
   const cartContext = useContext(CartContext)
-  const {addToCart, setSavedItems} = cartContext;
+  const {addToCart, setSavedItems,isAuthenticated} = cartContext;
 
-  const addToBasketHandler =(table)=>{
-    const {id,image,name,price,rating} = table
-    addToCart({id,image,name,price,rating });
-    
-};
+  const addToBasketHandler = (table) => {
+    const { id, image, name, price, rating } = table;
+    if (isAuthenticated) {
+      addToCart({ id, image, name, price, rating });
+    } else {
+      // Handle the case when the user is not authenticated
+      alert('Please log in to add items to the basket.');
+    }
+  };
+  
   const addToSavedHandler = (table) =>{
     const { id, image, name, price, rating } = table;
-    setSavedItems({ id, image, name, price, rating });
+    if (isAuthenticated) {
+      setSavedItems({ id, image, name, price, rating });
+    } else {
+      // Handle the case when the user is not authenticated
+      alert('Please log in to save this item.');
+    }
   }
 
   return (

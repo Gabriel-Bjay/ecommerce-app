@@ -8,8 +8,9 @@
     const initialState = {
       cartItems: [],
       checkout: false,
-      user:"",
+      user:null,
       savedItems: [],
+      isAuthenticated:false,
     };
 
     //Set up the reducer
@@ -56,6 +57,8 @@
         type: "SET_USER",
         payload: user,
       });
+      const isAuthenticated = user !== null; // Adjust the condition based on your authentication logic
+        dispatch({ type: "SET_AUTHENTICATION", payload: isAuthenticated });
     };
 
     //Function to handle when the user clicks the checkout button
@@ -73,6 +76,7 @@
           cartItems: state.cartItems,
           savedItems:state.savedItems,
           user: state.user,
+          isAuthenticated: state.isAuthenticated,
           setCartItems,
           setSavedItems,
           addToCart,
@@ -82,6 +86,7 @@
           handleCheckout,
           clearCart,
           setUser,
+          dispatch,
         }}
       >
         {children}

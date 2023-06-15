@@ -6,3 +6,4 @@ export const CHECKOUT = "CHECKOUT";
 export const CLEAR = "CLEAR";
 export const SAVE = "SAVE";
 export const SET_USER= "SET_USER";
+export const SET_AUTHENTICATION = "SET_AUTHENTICATION";
